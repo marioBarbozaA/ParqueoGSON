@@ -21,10 +21,11 @@ public class ClsVehiculos {
     
     public int IdVehiculo;
     public String Placa;
-    public String Marca;
-    public String Modelo;
-    public String Color;
     public String Tipo;
+    public String duenno ;
+    public String descuento;
+    public String horas;
+    
     
     
     
