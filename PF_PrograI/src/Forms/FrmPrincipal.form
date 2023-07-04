@@ -225,9 +225,9 @@
               <Font name="Dialog" size="12" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/caja.png"/>
+              <Image iconType="3" name="/Imagenes/cashier.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Env&#xed;os"/>
+            <Property name="text" type="java.lang.String" value="Cierre"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -324,9 +324,9 @@
               <Font name="Dialog" size="12" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/clientes.png"/>
+              <Image iconType="3" name="/Imagenes/cobrar.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Conductores"/>
+            <Property name="text" type="java.lang.String" value="Cobrar"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>

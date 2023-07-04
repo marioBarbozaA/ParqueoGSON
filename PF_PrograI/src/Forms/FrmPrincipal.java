@@ -104,8 +104,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jPanel1.add(btnClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, 70));
 
         btnEnvios.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        btnEnvios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/caja.png"))); // NOI18N
-        btnEnvios.setText("Envíos");
+        btnEnvios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cashier.png"))); // NOI18N
+        btnEnvios.setText("Cierre");
         btnEnvios.setToolTipText("");
         btnEnvios.setBorder(null);
         btnEnvios.setBorderPainted(false);
@@ -155,8 +155,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jPanel1.add(btnVehiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 80, 70));
 
         btnConductores.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        btnConductores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/clientes.png"))); // NOI18N
-        btnConductores.setText("Conductores");
+        btnConductores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cobrar.png"))); // NOI18N
+        btnConductores.setText("Cobrar");
         btnConductores.setToolTipText("");
         btnConductores.setBorder(null);
         btnConductores.setBorderPainted(false);

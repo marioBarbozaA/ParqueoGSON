@@ -39,17 +39,17 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
         for (ClsVehiculos MiVehiculo : ClsDB.jsonVehiculos) {
             Object[] row = new Object[]{MiVehiculo.IdVehiculo,
                                         MiVehiculo.Placa,
-                                        MiVehiculo.Marca,
-                                        MiVehiculo.Modelo,
-                                        MiVehiculo.Color,
+                                        MiVehiculo.descuento,
+                                        MiVehiculo.duenno,
+                                        MiVehiculo.horas,
                                         MiVehiculo.Tipo};
             
             if (buscar.equals("")) {
                 modelo.addRow(row);
             }else if (MiVehiculo.Placa.toLowerCase().contains(buscar) ||
-                      MiVehiculo.Marca.toLowerCase().contains(buscar) ||
-                      MiVehiculo.Modelo.toLowerCase().contains(buscar) ||
-                      MiVehiculo.Color.toLowerCase().contains(buscar) ||
+                      MiVehiculo.descuento.toLowerCase().contains(buscar) ||
+                      MiVehiculo.duenno.toLowerCase().contains(buscar) ||
+                      MiVehiculo.horas.toLowerCase().contains(buscar) ||
                       MiVehiculo.Tipo.toLowerCase().contains(buscar)) {
                       modelo.addRow(row);
             }
@@ -234,9 +234,9 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
                 fAgregarVehiculo.IdEditar = IdEditar;
                 
                 fAgregarVehiculo.txtPlaca.setText(ClsDB.jsonVehiculos.get(IdEditar).Placa);
-                fAgregarVehiculo.txtMarca.setText(ClsDB.jsonVehiculos.get(IdEditar).Marca);
-                fAgregarVehiculo.txtModelo.setText(ClsDB.jsonVehiculos.get(IdEditar).Modelo);
-                fAgregarVehiculo.txtColor.setText(ClsDB.jsonVehiculos.get(IdEditar).Color);
+                fAgregarVehiculo.txtMarca.setText(ClsDB.jsonVehiculos.get(IdEditar).descuento);
+                fAgregarVehiculo.txtModelo.setText(ClsDB.jsonVehiculos.get(IdEditar).duenno);
+                fAgregarVehiculo.txtColor.setText(ClsDB.jsonVehiculos.get(IdEditar).horas);
                 fAgregarVehiculo.cmbTipo.setSelectedItem(ClsDB.jsonVehiculos.get(IdEditar).Tipo);
                 fAgregarVehiculo.btnGuardar.setText("EDITAR VEHÍCULO");
                 
