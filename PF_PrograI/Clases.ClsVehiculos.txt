@@ -1,0 +1,1 @@
+[{"IdVehiculo":1,"Placa":"LDF-131","Marca":"Toyota","Modelo":"Yaris","Color":"Gris","Tipo":"Automóvil"},{"IdVehiculo":2,"Placa":"JDF-789","Marca":"Hiunday","Modelo":"Santa Fe","Color":"Azul","Tipo":"Automóvil"}]
