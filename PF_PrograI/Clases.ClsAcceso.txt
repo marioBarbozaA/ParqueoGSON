@@ -1,1 +1,1 @@
-[{"IdAcceso":1,"Correo":"umca2023@gmail.com","Clave":"UMCA123","Recordar":true,"Activo":true},{"IdAcceso":2,"Correo":"umca2023-2@gmail.com","Clave":"UMCA123","Recordar":false,"Activo":false}]
+[{"IdAcceso":1,"Correo":"umca2023@gmail.com","Clave":"UMCA123","Recordar":false,"Activo":true},{"IdAcceso":2,"Correo":"umca2023-2@gmail.com","Clave":"UMCA123","Recordar":false,"Activo":true},{"IdAcceso":3,"Correo":"Marionetabar1@gmail.com","Clave":"pene","Recordar":true,"Activo":true}]
