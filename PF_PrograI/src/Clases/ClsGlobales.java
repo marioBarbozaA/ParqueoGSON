@@ -5,10 +5,8 @@
 package Clases;
 
 import Forms.FrmClientes;
-import Forms.FrmConductores;
 import Forms.FrmPrincipal;
 import Forms.FrmVehiculos;
-import Forms.FrmEnvios;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,8 +20,6 @@ public class ClsGlobales {
    
     public static FrmClientes fClientes = new FrmClientes();
     public static FrmVehiculos fVehiculos = new FrmVehiculos();
-    public static FrmConductores fConductores = new FrmConductores();
-    public static FrmEnvios fEnvios = new FrmEnvios();
     
     public static boolean ValidarMail(String email) {
         // Patron para validar el email

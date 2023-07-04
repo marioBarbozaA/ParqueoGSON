@@ -41,7 +41,6 @@ public class ClsClientes {
         String jsonString = gson.toJson(ClsDB.jsonClientes);
         
         String[] arrSplitFile = this.toString().split("@"); 
-        
         try{
             FileWriter fr = new FileWriter(arrSplitFile[0] + ".txt");
             fr.write(jsonString);

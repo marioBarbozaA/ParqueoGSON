@@ -72,6 +72,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
         btnAgregar = new javax.swing.JButton();
         txtBuscar = new javax.swing.JTextField();
         btnEditar = new javax.swing.JButton();
+        btnEditar1 = new javax.swing.JButton();
 
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jLabel2.setText("Buscar vehículo");
@@ -81,14 +82,14 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "Id", "Placa", "Marca", "Modelo", "Color", "Tipo"
+                "Id", "Placa", "Dueño", "Descuento", "Horas", "Tipo"
             }
         ) {
             Class[] types = new Class [] {
                 java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                true, true, false, true, true, true
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -117,7 +118,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
 
         btnAgregar.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/agregar.png"))); // NOI18N
-        btnAgregar.setText("Agregar un nuevo vehículo");
+        btnAgregar.setText("Agregar");
         btnAgregar.setToolTipText("");
         btnAgregar.setBorder(null);
         btnAgregar.setBorderPainted(false);
@@ -137,7 +138,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
 
         btnEditar.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/editar.png"))); // NOI18N
-        btnEditar.setText("Editar vehículo seleccionado");
+        btnEditar.setText("Editar");
         btnEditar.setToolTipText("");
         btnEditar.setBorder(null);
         btnEditar.setBorderPainted(false);
@@ -146,6 +147,20 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarActionPerformed(evt);
+            }
+        });
+
+        btnEditar1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        btnEditar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cobrar.png"))); // NOI18N
+        btnEditar1.setText("Cobrar");
+        btnEditar1.setToolTipText("");
+        btnEditar1.setBorder(null);
+        btnEditar1.setBorderPainted(false);
+        btnEditar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEditar1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnEditar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditar1ActionPerformed(evt);
             }
         });
 
@@ -161,9 +176,11 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEditar1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -180,7 +197,8 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnEditar1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(44, 44, 44)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -200,9 +218,9 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
             IdEditar = -1;
             fAgregarVehiculo.IdEditar = -1;
             fAgregarVehiculo.txtPlaca.setText("");
-            fAgregarVehiculo.txtMarca.setText("");
-            fAgregarVehiculo.txtModelo.setText("");
-            fAgregarVehiculo.txtColor.setText("");
+            fAgregarVehiculo.txtDescuento.setText("");
+            fAgregarVehiculo.txtDuenno.setText("");
+            fAgregarVehiculo.txtHoras.setText("");
             fAgregarVehiculo.btnGuardar.setText("GUARDAR VEHÍCULO");
         
             fAgregarVehiculo.show();
@@ -234,9 +252,9 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
                 fAgregarVehiculo.IdEditar = IdEditar;
                 
                 fAgregarVehiculo.txtPlaca.setText(ClsDB.jsonVehiculos.get(IdEditar).Placa);
-                fAgregarVehiculo.txtMarca.setText(ClsDB.jsonVehiculos.get(IdEditar).descuento);
-                fAgregarVehiculo.txtModelo.setText(ClsDB.jsonVehiculos.get(IdEditar).duenno);
-                fAgregarVehiculo.txtColor.setText(ClsDB.jsonVehiculos.get(IdEditar).horas);
+                fAgregarVehiculo.txtDescuento.setText(ClsDB.jsonVehiculos.get(IdEditar).descuento);
+                fAgregarVehiculo.txtDuenno.setText(ClsDB.jsonVehiculos.get(IdEditar).duenno);
+                fAgregarVehiculo.txtHoras.setText(ClsDB.jsonVehiculos.get(IdEditar).horas);
                 fAgregarVehiculo.cmbTipo.setSelectedItem(ClsDB.jsonVehiculos.get(IdEditar).Tipo);
                 fAgregarVehiculo.btnGuardar.setText("EDITAR VEHÍCULO");
                 
@@ -258,10 +276,15 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
         IdEditar =  Integer.parseInt(tblVehiculos.getValueAt(fila, 0).toString());
     }//GEN-LAST:event_tblVehiculosMouseClicked
 
+    private void btnEditar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEditar1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnEditar;
+    private javax.swing.JButton btnEditar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;

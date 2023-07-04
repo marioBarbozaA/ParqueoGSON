@@ -29,9 +29,9 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
         boolean Validado = true;
         
         if (txtPlaca.getText().isEmpty() ||
-            txtMarca.getText().isEmpty() ||
-            txtModelo.getText().isEmpty() ||
-            txtColor.getText().isEmpty()
+            txtDescuento.getText().isEmpty() ||
+            txtDuenno.getText().isEmpty() ||
+            txtHoras.getText().isEmpty()
             ) 
         {
             Validado = false;
@@ -42,9 +42,9 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
     
     private void Limpiar(){
         txtPlaca.setText("");
-        txtMarca.setText("");
-        txtModelo.setText("");
-        txtColor.setText("");
+        txtDescuento.setText("");
+        txtDuenno.setText("");
+        txtHoras.setText("");
         cmbTipo.setSelectedIndex(0);
     }
 
@@ -58,12 +58,12 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
     private void initComponents() {
 
         pnlCuerpo = new javax.swing.JPanel();
-        lblNombre = new javax.swing.JLabel();
-        txtMarca = new javax.swing.JTextField();
-        lblApellidos = new javax.swing.JLabel();
-        txtModelo = new javax.swing.JTextField();
-        lblCorreo = new javax.swing.JLabel();
-        txtColor = new javax.swing.JTextField();
+        lblHoras = new javax.swing.JLabel();
+        txtDescuento = new javax.swing.JTextField();
+        lblADuenno = new javax.swing.JLabel();
+        txtDuenno = new javax.swing.JTextField();
+        lblDescuento = new javax.swing.JLabel();
+        txtHoras = new javax.swing.JTextField();
         lblTelefono = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         btnCerrar = new javax.swing.JButton();
@@ -86,40 +86,40 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
 
         pnlCuerpo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblNombre.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        lblNombre.setForeground(new java.awt.Color(0, 0, 0));
-        lblNombre.setText("Marca");
-        pnlCuerpo.add(lblNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+        lblHoras.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        lblHoras.setForeground(new java.awt.Color(0, 0, 0));
+        lblHoras.setText("Horas");
+        pnlCuerpo.add(lblHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
-        txtMarca.setBackground(java.awt.SystemColor.control);
-        txtMarca.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
-        txtMarca.setPreferredSize(new java.awt.Dimension(3, 13));
-        pnlCuerpo.add(txtMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 230, 30));
+        txtDescuento.setBackground(java.awt.SystemColor.control);
+        txtDescuento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
+        txtDescuento.setPreferredSize(new java.awt.Dimension(3, 13));
+        pnlCuerpo.add(txtDescuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 230, 30));
 
-        lblApellidos.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        lblApellidos.setForeground(new java.awt.Color(0, 0, 0));
-        lblApellidos.setText("Modelo");
-        pnlCuerpo.add(lblApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, -1, -1));
+        lblADuenno.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        lblADuenno.setForeground(new java.awt.Color(0, 0, 0));
+        lblADuenno.setText("Dueño");
+        pnlCuerpo.add(lblADuenno, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, -1));
 
-        txtModelo.setBackground(java.awt.SystemColor.control);
-        txtModelo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
-        txtModelo.setPreferredSize(new java.awt.Dimension(3, 13));
-        pnlCuerpo.add(txtModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 230, 30));
+        txtDuenno.setBackground(java.awt.SystemColor.control);
+        txtDuenno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
+        txtDuenno.setPreferredSize(new java.awt.Dimension(3, 13));
+        pnlCuerpo.add(txtDuenno, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 230, 30));
 
-        lblCorreo.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        lblCorreo.setForeground(new java.awt.Color(0, 0, 0));
-        lblCorreo.setText("Color");
-        pnlCuerpo.add(lblCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+        lblDescuento.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        lblDescuento.setForeground(new java.awt.Color(0, 0, 0));
+        lblDescuento.setText("Descuento");
+        pnlCuerpo.add(lblDescuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
-        txtColor.setBackground(java.awt.SystemColor.control);
-        txtColor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
-        txtColor.setPreferredSize(new java.awt.Dimension(3, 13));
-        pnlCuerpo.add(txtColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 230, 30));
+        txtHoras.setBackground(java.awt.SystemColor.control);
+        txtHoras.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
+        txtHoras.setPreferredSize(new java.awt.Dimension(3, 13));
+        pnlCuerpo.add(txtHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 230, 30));
 
         lblTelefono.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         lblTelefono.setForeground(new java.awt.Color(0, 0, 0));
         lblTelefono.setText("Tipo");
-        pnlCuerpo.add(lblTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, -1, -1));
+        pnlCuerpo.add(lblTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, -1, -1));
         pnlCuerpo.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 472, 10));
 
         btnCerrar.setBackground(new java.awt.Color(153, 0, 0));
@@ -165,7 +165,7 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
 
         cmbTipo.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         cmbTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Motocicleta", "Automóvil", "PickUp", "Camión" }));
-        pnlCuerpo.add(cmbTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 230, 30));
+        pnlCuerpo.add(cmbTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 230, 30));
 
         lblNombre1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         lblNombre1.setForeground(new java.awt.Color(0, 0, 0));
@@ -200,17 +200,13 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
             if (IdEditar > -1) {
                 
                 ClsDB.jsonVehiculos.get(IdEditar).Placa = txtPlaca.getText();
-                ClsDB.jsonVehiculos.get(IdEditar).Marca = txtMarca.getText();
-                ClsDB.jsonVehiculos.get(IdEditar).Modelo = txtModelo.getText();
-                ClsDB.jsonVehiculos.get(IdEditar).Color = txtColor.getText();
+                ClsDB.jsonVehiculos.get(IdEditar).duenno = txtDuenno.getText();
                 ClsDB.jsonVehiculos.get(IdEditar).Tipo = cmbTipo.getSelectedItem().toString();
 
             }else{
                 MisVehiculos.IdVehiculo = ClsDB.jsonVehiculos.size() + 1;
                 MisVehiculos.Placa = txtPlaca.getText();
-                MisVehiculos.Marca = txtMarca.getText();
-                MisVehiculos.Modelo = txtModelo.getText();
-                MisVehiculos.Color = txtColor.getText();
+                MisVehiculos.duenno = txtDuenno.getText();
                 MisVehiculos.Tipo = cmbTipo.getSelectedItem().toString();
 
                 ClsDB.jsonVehiculos.add(MisVehiculos);
@@ -291,17 +287,17 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
     private javax.swing.JButton btnLimpiar;
     public javax.swing.JComboBox<String> cmbTipo;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JLabel lblApellidos;
+    private javax.swing.JLabel lblADuenno;
     private javax.swing.JLabel lblBarraSup;
-    private javax.swing.JLabel lblCorreo;
-    private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblDescuento;
+    private javax.swing.JLabel lblHoras;
     private javax.swing.JLabel lblNombre1;
     private javax.swing.JLabel lblTelefono;
     private javax.swing.JLabel lblTitulo1;
     private javax.swing.JPanel pnlCuerpo;
-    public javax.swing.JTextField txtColor;
-    public javax.swing.JTextField txtMarca;
-    public javax.swing.JTextField txtModelo;
+    public javax.swing.JTextField txtDescuento;
+    public javax.swing.JTextField txtDuenno;
+    public javax.swing.JTextField txtHoras;
     public javax.swing.JTextField txtPlaca;
     // End of variables declaration//GEN-END:variables
 }
