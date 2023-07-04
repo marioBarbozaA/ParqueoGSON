@@ -201,12 +201,16 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
                 
                 ClsDB.jsonVehiculos.get(IdEditar).Placa = txtPlaca.getText();
                 ClsDB.jsonVehiculos.get(IdEditar).duenno = txtDuenno.getText();
+                ClsDB.jsonVehiculos.get(IdEditar).descuento = txtDescuento.getText();
+                ClsDB.jsonVehiculos.get(IdEditar).horas = txtHoras.getText();
                 ClsDB.jsonVehiculos.get(IdEditar).Tipo = cmbTipo.getSelectedItem().toString();
 
             }else{
                 MisVehiculos.IdVehiculo = ClsDB.jsonVehiculos.size() + 1;
                 MisVehiculos.Placa = txtPlaca.getText();
                 MisVehiculos.duenno = txtDuenno.getText();
+                MisVehiculos.descuento = txtDescuento.getText();
+                MisVehiculos.horas = txtHoras.getText();
                 MisVehiculos.Tipo = cmbTipo.getSelectedItem().toString();
 
                 ClsDB.jsonVehiculos.add(MisVehiculos);

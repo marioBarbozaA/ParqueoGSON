@@ -5,7 +5,6 @@
 package DB;
 
 import Clases.ClsAcceso;
-import Clases.ClsClientes;
 import Clases.ClsVehiculos;
 import java.util.ArrayList;
 
@@ -16,7 +15,6 @@ import java.util.ArrayList;
 public class ClsDB {
     
     public static ArrayList<ClsAcceso> jsonAcceso = new ArrayList<ClsAcceso>();
-    public static ArrayList<ClsClientes> jsonClientes = new ArrayList<ClsClientes>();
     public static ArrayList<ClsVehiculos> jsonVehiculos = new ArrayList<ClsVehiculos>();
 
 }
