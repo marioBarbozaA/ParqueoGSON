@@ -5,12 +5,15 @@
 package Forms;
 
 import static Clases.ClsGlobales.formPrincipal;
-
+import DB.ClsDB;
+import java.util.ArrayList;
+import javax.swing.JButton;
 /**
  *
  * @author mario
  */
 public class FrmParking extends javax.swing.JFrame {
+    
 
     /**
      * Creates new form FrmParking
@@ -18,6 +21,32 @@ public class FrmParking extends javax.swing.JFrame {
     public FrmParking() {
         initComponents();
         setTitle("View Parqueo");
+        
+        
+        
+        JButton[] buttonArray = {
+            btnEspacio, btnEspacio1, btnEspacio2, btnEspacio3, btnEspacio4,
+            btnEspacio5, btnEspacio6, btnEspacio7, btnEspacio8, btnEspacio9,
+            btnEspacio10, btnEspacio11
+        };
+        
+        for (int i = 0; i < buttonArray.length; i++) {
+            int index = i;
+            JButton button = buttonArray[i];
+
+            button.addActionListener(e -> {
+                // Button click event handler
+                System.out.println("Button clicked: " + button.getText() + " (Index: " + index + ")");
+            });
+
+            // Check if ClsDB.arregloVehiculos has a null reference at the index
+            while (index < ClsDB.arregloVehiculos.length && ClsDB.arregloVehiculos[index] == null) {
+                button.setVisible(false);
+                button.setEnabled(false);
+                break;
+            }
+        }
+        
     }
 
     /**
@@ -53,113 +82,137 @@ public class FrmParking extends javax.swing.JFrame {
 
         pnlCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnEspacio.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio.setBackground(new java.awt.Color(32, 32, 32));
+        btnEspacio.setForeground(new java.awt.Color(20, 20, 20));
+        btnEspacio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sambucci.png"))); // NOI18N
         btnEspacio.setBorderPainted(false);
         btnEspacio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEspacioActionPerformed(evt);
             }
         });
-        pnlCentral.add(btnEspacio, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 70, 80));
+        pnlCentral.add(btnEspacio, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 440, 40, 80));
 
-        btnEspacio1.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio1.setBackground(new java.awt.Color(32, 32, 32));
+        btnEspacio1.setForeground(new java.awt.Color(20, 20, 20));
+        btnEspacio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sambucci.png"))); // NOI18N
         btnEspacio1.setBorderPainted(false);
         btnEspacio1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEspacio1ActionPerformed(evt);
             }
         });
-        pnlCentral.add(btnEspacio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 70, 80));
+        pnlCentral.add(btnEspacio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 40, 80));
 
-        btnEspacio2.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio2.setBackground(new java.awt.Color(32, 32, 32));
+        btnEspacio2.setForeground(new java.awt.Color(20, 20, 20));
+        btnEspacio2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sambucci.png"))); // NOI18N
         btnEspacio2.setBorderPainted(false);
         btnEspacio2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEspacio2ActionPerformed(evt);
             }
         });
-        pnlCentral.add(btnEspacio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 70, 80));
+        pnlCentral.add(btnEspacio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 40, 80));
 
-        btnEspacio3.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio3.setBackground(new java.awt.Color(32, 32, 32));
+        btnEspacio3.setForeground(new java.awt.Color(20, 20, 20));
+        btnEspacio3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sambucci.png"))); // NOI18N
         btnEspacio3.setBorderPainted(false);
         btnEspacio3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEspacio3ActionPerformed(evt);
             }
         });
-        pnlCentral.add(btnEspacio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 70, 80));
+        pnlCentral.add(btnEspacio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 40, 80));
 
-        btnEspacio4.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio4.setBackground(new java.awt.Color(32, 32, 32));
+        btnEspacio4.setForeground(new java.awt.Color(20, 20, 20));
+        btnEspacio4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sambucci.png"))); // NOI18N
         btnEspacio4.setBorderPainted(false);
         btnEspacio4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEspacio4ActionPerformed(evt);
             }
         });
-        pnlCentral.add(btnEspacio4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 70, 80));
+        pnlCentral.add(btnEspacio4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 40, 80));
 
-        btnEspacio5.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio5.setBackground(new java.awt.Color(32, 32, 32));
+        btnEspacio5.setForeground(new java.awt.Color(20, 20, 20));
+        btnEspacio5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sambucci.png"))); // NOI18N
         btnEspacio5.setBorderPainted(false);
         btnEspacio5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEspacio5ActionPerformed(evt);
             }
         });
-        pnlCentral.add(btnEspacio5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, 70, 80));
+        pnlCentral.add(btnEspacio5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 210, 40, 80));
 
-        btnEspacio6.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio6.setBackground(new java.awt.Color(32, 32, 32));
+        btnEspacio6.setForeground(new java.awt.Color(20, 20, 20));
+        btnEspacio6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sambucci.png"))); // NOI18N
         btnEspacio6.setBorderPainted(false);
         btnEspacio6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEspacio6ActionPerformed(evt);
             }
         });
-        pnlCentral.add(btnEspacio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, 70, 80));
+        pnlCentral.add(btnEspacio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 210, 40, 80));
 
-        btnEspacio7.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio7.setBackground(new java.awt.Color(32, 32, 32));
+        btnEspacio7.setForeground(new java.awt.Color(20, 20, 20));
+        btnEspacio7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sambucci.png"))); // NOI18N
         btnEspacio7.setBorderPainted(false);
         btnEspacio7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEspacio7ActionPerformed(evt);
             }
         });
-        pnlCentral.add(btnEspacio7, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 440, 70, 80));
+        pnlCentral.add(btnEspacio7, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 440, 40, 80));
 
-        btnEspacio8.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio8.setBackground(new java.awt.Color(32, 32, 32));
+        btnEspacio8.setForeground(new java.awt.Color(20, 20, 20));
+        btnEspacio8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sambucci.png"))); // NOI18N
         btnEspacio8.setBorderPainted(false);
         btnEspacio8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEspacio8ActionPerformed(evt);
             }
         });
-        pnlCentral.add(btnEspacio8, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 440, 70, 80));
+        pnlCentral.add(btnEspacio8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 40, 80));
 
-        btnEspacio9.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio9.setBackground(new java.awt.Color(32, 32, 32));
+        btnEspacio9.setForeground(new java.awt.Color(20, 20, 20));
+        btnEspacio9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sambucci.png"))); // NOI18N
         btnEspacio9.setBorderPainted(false);
         btnEspacio9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEspacio9ActionPerformed(evt);
             }
         });
-        pnlCentral.add(btnEspacio9, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 440, 70, 80));
+        pnlCentral.add(btnEspacio9, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 440, 40, 80));
 
-        btnEspacio10.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio10.setBackground(new java.awt.Color(32, 32, 32));
+        btnEspacio10.setForeground(new java.awt.Color(20, 20, 20));
+        btnEspacio10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sambucci.png"))); // NOI18N
         btnEspacio10.setBorderPainted(false);
         btnEspacio10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEspacio10ActionPerformed(evt);
             }
         });
-        pnlCentral.add(btnEspacio10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 70, 80));
+        pnlCentral.add(btnEspacio10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, 40, 80));
 
-        btnEspacio11.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio11.setBackground(new java.awt.Color(32, 32, 32));
+        btnEspacio11.setForeground(new java.awt.Color(20, 20, 20));
+        btnEspacio11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sambucci.png"))); // NOI18N
         btnEspacio11.setBorderPainted(false);
         btnEspacio11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEspacio11ActionPerformed(evt);
             }
         });
-        pnlCentral.add(btnEspacio11, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 70, 80));
+        pnlCentral.add(btnEspacio11, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, 40, 80));
 
         lblParqueo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Parqueo.png"))); // NOI18N
         pnlCentral.add(lblParqueo, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 56, -1, 563));
@@ -284,6 +337,8 @@ public class FrmParking extends javax.swing.JFrame {
                 new FrmParking().setVisible(true);
             }
         });
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -307,4 +362,11 @@ public class FrmParking extends javax.swing.JFrame {
     private javax.swing.JLabel lblTitulo1;
     private javax.swing.JPanel pnlCentral;
     // End of variables declaration//GEN-END:variables
+
+
+
+    
+    
+
+    
 }
