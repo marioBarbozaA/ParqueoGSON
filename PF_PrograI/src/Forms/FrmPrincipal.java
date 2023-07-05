@@ -63,7 +63,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         mnuUsuarios = new javax.swing.JMenuItem();
         mnuCerrar = new javax.swing.JMenuItem();
 
-        setTitle("ENVÍO DE PAQUETERÍA");
+        setTitle("PARQUEO SALCHICHON");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(desktopPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 890, 460));
