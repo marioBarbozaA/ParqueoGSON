@@ -238,7 +238,6 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
         if (IdEditar > 0 && IdEditar <= ClsDB.jsonVehiculos.size()) {
 
             if (!fAgregarVehiculo.isShowing()) {
-                System.out.println("entro");
                 int Contador = 0;
                 
                 for (ClsVehiculos MiVehiculo : ClsDB.jsonVehiculos) {
@@ -342,7 +341,11 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
 
             // Mostrar un mensaje con el monto cobrado
             JOptionPane.showMessageDialog(null, "Monto cobrado: $" + montoCobrado, "Cobro exitoso", JOptionPane.INFORMATION_MESSAGE);
-
+            ClsDB.jsonVehiculosRetirados.add(ClsDB.jsonVehiculos.get(IdEditar-1));
+            ClsDB.jsonVehiculosRetirados.get(IdEditar-1).GuardarDatosMemoriaRetirados();
+            ClsDB.jsonVehiculos.remove(IdEditar-1);
+            ClsDB.jsonVehiculos.get(0).ObtenerDatosMemoria();
+            
 
         } else {
             JOptionPane.showMessageDialog(null, "Por favor seleccione un vehículo para cobrar", "Cobro", JOptionPane.ERROR_MESSAGE);

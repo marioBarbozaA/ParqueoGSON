@@ -22,6 +22,8 @@ public class ClsGlobales {
     
     public static FrmParking fParking = new FrmParking();
     
+    
+    
     public static boolean ValidarMail(String email) {
         // Patron para validar el email
         Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");

@@ -1,0 +1,1 @@
+[{"IdVehiculo":2,"Placa":"321","Tipo":"Automóvil","duenno":"aaa","descuento":"0","activo":false,"entrada":"04/07/2023 10:30:45"},{"IdVehiculo":2,"Placa":"321","Tipo":"Automóvil","duenno":"aaa","descuento":"0","activo":false,"entrada":"04/07/2023 10:30:45"}]
