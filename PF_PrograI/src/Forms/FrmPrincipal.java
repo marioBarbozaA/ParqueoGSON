@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/MDIApplication.java to edit this template
- */
+
 package Forms;
 import Clases.ClsGlobales;
 import Forms.FrmLogin;
@@ -54,7 +51,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         mnuPrincipal = new javax.swing.JMenuBar();
         mnuArchivo = new javax.swing.JMenu();
         mnuClientes = new javax.swing.JMenuItem();
-        mnuVehiculos = new javax.swing.JMenuItem();
         mnuConductores = new javax.swing.JMenuItem();
         mnuEnvios = new javax.swing.JMenuItem();
         mnuInfo = new javax.swing.JMenu();
@@ -63,7 +59,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         mnuUsuarios = new javax.swing.JMenuItem();
         mnuCerrar = new javax.swing.JMenuItem();
 
-        setTitle("ENVÍO DE PAQUETERÍA");
+        setTitle("PARQUEO SALCHICHON");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(desktopPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 890, 460));
@@ -100,7 +96,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 btnViewActionPerformed(evt);
             }
         });
-        jPanel1.add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 80, 70));
+        jPanel1.add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 80, 70));
 
         btnCierre.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         btnCierre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cashier.png"))); // NOI18N
@@ -163,25 +159,19 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         mnuClientes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
         mnuClientes.setMnemonic('s');
-        mnuClientes.setText("Mis clientes");
+        mnuClientes.setLabel("vista");
         mnuClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuClientesActionPerformed(evt);
             }
         });
         mnuArchivo.add(mnuClientes);
-
-        mnuVehiculos.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        mnuVehiculos.setText("Mis vehículos");
-        mnuVehiculos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuVehiculosActionPerformed(evt);
-            }
-        });
-        mnuArchivo.add(mnuVehiculos);
+        mnuClientes.getAccessibleContext().setAccessibleName("Vista");
+        mnuClientes.getAccessibleContext().setAccessibleDescription("");
 
         mnuConductores.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        mnuConductores.setText("Mis conductores");
+        mnuConductores.setText("vehiculos");
+        mnuConductores.setActionCommand("Vehiculos");
         mnuConductores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuConductoresActionPerformed(evt);
@@ -191,7 +181,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         mnuEnvios.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
         mnuEnvios.setMnemonic('a');
-        mnuEnvios.setText("Mis envios");
+        mnuEnvios.setText("Cierre");
         mnuEnvios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuEnviosActionPerformed(evt);
@@ -298,10 +288,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private void mnuClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuClientesActionPerformed
     }//GEN-LAST:event_mnuClientesActionPerformed
 
-    private void mnuVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuVehiculosActionPerformed
-        btnVehiculosActionPerformed(null);
-    }//GEN-LAST:event_mnuVehiculosActionPerformed
-
     private void mnuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuUsuariosActionPerformed
         btnAccesosActionPerformed(null);
     }//GEN-LAST:event_mnuUsuariosActionPerformed
@@ -376,7 +362,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar mnuPrincipal;
     private javax.swing.JMenu mnuSalir;
     private javax.swing.JMenuItem mnuUsuarios;
-    private javax.swing.JMenuItem mnuVehiculos;
     // End of variables declaration//GEN-END:variables
 
 }
