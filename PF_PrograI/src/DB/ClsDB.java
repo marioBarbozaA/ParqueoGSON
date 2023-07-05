@@ -13,8 +13,14 @@ import java.util.ArrayList;
  * @author juand
  */
 public class ClsDB {
-    
     public static ArrayList<ClsAcceso> jsonAcceso = new ArrayList<ClsAcceso>();
     public static ArrayList<ClsVehiculos> jsonVehiculos = new ArrayList<ClsVehiculos>();
     
+    public static boolean agregarVehiculo(ClsVehiculos vehiculo){
+        if (jsonVehiculos.size() >= 12){
+            return false;
+        }
+        jsonVehiculos.add(vehiculo);
+        return true;
+    }
 }

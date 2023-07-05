@@ -162,7 +162,7 @@ public class FrmParking extends javax.swing.JFrame {
         pnlCentral.add(lblParqueo, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 56, -1, 563));
 
         lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblTitulo.setText("         Parqueito");
+        lblTitulo.setText("Parqueo Salchichón");
         pnlCentral.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 6, 243, -1));
 
         btnRegreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png"))); // NOI18N

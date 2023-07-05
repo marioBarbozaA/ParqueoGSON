@@ -238,7 +238,16 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
                 MisVehiculos.entrada = txtHoras.getText();
                 MisVehiculos.Tipo = cmbTipo.getSelectedItem().toString();
 
-                ClsDB.jsonVehiculos.add(MisVehiculos);
+                if (!ClsDB.agregarVehiculo(MisVehiculos)){
+                    JOptionPane.showMessageDialog(null,
+                            "Parqueo lleno.",
+                            "Error",
+                            JOptionPane.ERROR_MESSAGE
+                    );
+                    
+                    this.dispose();
+                    
+                }
             }
             
             if (MisVehiculos.GuardarDatosMemoria()) {
