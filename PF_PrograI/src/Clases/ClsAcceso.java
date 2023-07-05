@@ -14,10 +14,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author juand
- */
+
 public class ClsAcceso {
     
     public ClsAcceso(){
@@ -56,7 +53,7 @@ public class ClsAcceso {
         for (ClsAcceso MiObjeto : ClsDB.jsonAcceso)
         {
             if (MiObjeto.Correo.equals(Correo)) {
-                MiObjeto.Clave = "UMCA123";
+                MiObjeto.Clave = "123";
                 Result = true;
             }
         }
