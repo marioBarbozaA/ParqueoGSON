@@ -4,10 +4,7 @@
  */
 package Clases;
 
-/**
- *
- * @author Camilo
- */
+
 public class ClsCierre {
     
 }

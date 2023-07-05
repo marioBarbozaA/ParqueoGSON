@@ -55,7 +55,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         mnuArchivo = new javax.swing.JMenu();
         mnuClientes = new javax.swing.JMenuItem();
         mnuVehiculos = new javax.swing.JMenuItem();
-        mnuConductores = new javax.swing.JMenuItem();
         mnuEnvios = new javax.swing.JMenuItem();
         mnuInfo = new javax.swing.JMenu();
         mnuAcerca = new javax.swing.JMenuItem();
@@ -100,7 +99,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 btnViewActionPerformed(evt);
             }
         });
-        jPanel1.add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 80, 70));
+        jPanel1.add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 80, 70));
 
         btnCierre.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         btnCierre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cashier.png"))); // NOI18N
@@ -163,7 +162,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         mnuClientes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
         mnuClientes.setMnemonic('s');
-        mnuClientes.setText("Mis clientes");
+        mnuClientes.setText("vista");
         mnuClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuClientesActionPerformed(evt);
@@ -180,18 +179,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
         });
         mnuArchivo.add(mnuVehiculos);
 
-        mnuConductores.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        mnuConductores.setText("Mis conductores");
-        mnuConductores.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuConductoresActionPerformed(evt);
-            }
-        });
-        mnuArchivo.add(mnuConductores);
-
         mnuEnvios.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
         mnuEnvios.setMnemonic('a');
-        mnuEnvios.setText("Mis envios");
+        mnuEnvios.setText("Mi cierre");
         mnuEnvios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuEnviosActionPerformed(evt);
@@ -280,9 +270,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnAccesosActionPerformed
 
-    private void mnuConductoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuConductoresActionPerformed
-    }//GEN-LAST:event_mnuConductoresActionPerformed
-
     private void btnVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVehiculosActionPerformed
         
         desktopPane.removeAll();
@@ -370,7 +357,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu mnuArchivo;
     private javax.swing.JMenuItem mnuCerrar;
     private javax.swing.JMenuItem mnuClientes;
-    private javax.swing.JMenuItem mnuConductores;
     private javax.swing.JMenuItem mnuEnvios;
     private javax.swing.JMenu mnuInfo;
     private javax.swing.JMenuBar mnuPrincipal;

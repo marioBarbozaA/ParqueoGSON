@@ -73,7 +73,7 @@ public class FrmAcerca extends javax.swing.JFrame {
         jTextArea1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
         jTextArea1.setRows(5);
-        jTextArea1.setText("Sistema de envío de paquetería para\npersonas y empresas. \n\nVersión del sistema 1.2.1");
+        jTextArea1.setText("Sistema de Parqueo \nVersión del sistema 1.2.1\nDeveloper Fabian");
         jTextArea1.setBorder(null);
         jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jTextArea1.setEnabled(false);
