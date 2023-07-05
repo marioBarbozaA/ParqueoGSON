@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class ClsDB {
     private static final int MAX_VEHICULOS = 12;
-    private static ClsVehiculos[] arregloVehiculos = new ClsVehiculos[MAX_VEHICULOS];
+    public static ClsVehiculos[] arregloVehiculos = new ClsVehiculos[MAX_VEHICULOS];
     public static ArrayList<ClsAcceso> jsonAcceso = new ArrayList<ClsAcceso>();
     public static ArrayList<ClsVehiculos> jsonVehiculos = new ArrayList<ClsVehiculos>();
     
