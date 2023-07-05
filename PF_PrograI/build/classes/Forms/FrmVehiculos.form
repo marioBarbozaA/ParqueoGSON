@@ -32,7 +32,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnEditar" min="-2" pref="117" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnEditar1" min="-2" pref="117" max="-2" attributes="0"/>
+                      <Component id="btnCobrar" min="-2" pref="117" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -54,7 +54,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnAgregar" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                           <Component id="btnEditar" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="btnEditar1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="btnCobrar" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -95,7 +95,7 @@
                 <Column editable="false" title="Placa" type="java.lang.String"/>
                 <Column editable="false" title="Descuento" type="java.lang.String"/>
                 <Column editable="false" title="Due&#xf1;o" type="java.lang.String"/>
-                <Column editable="false" title="Horas" type="java.lang.String"/>
+                <Column editable="false" title="Entrada" type="java.lang.String"/>
                 <Column editable="false" title="Tipo" type="java.lang.String"/>
               </Table>
             </Property>
@@ -149,7 +149,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="24" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Listado de veh&#xed;culos"/>
+        <Property name="text" type="java.lang.String" value="Veh&#xed;culos parqueados"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnAgregar">
@@ -203,7 +203,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnEditar1">
+    <Component class="javax.swing.JButton" name="btnCobrar">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="12" style="0"/>
@@ -223,7 +223,7 @@
         <Property name="horizontalTextPosition" type="int" value="4"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditar1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCobrarActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

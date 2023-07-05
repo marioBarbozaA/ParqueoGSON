@@ -97,10 +97,10 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
 
         pnlCuerpo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblHoras.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        lblHoras.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         lblHoras.setForeground(new java.awt.Color(0, 0, 0));
-        lblHoras.setText("Fecha entrada");
-        pnlCuerpo.add(lblHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+        lblHoras.setText("Fecha entrada (Formato: 04/07/2023 15:30:45)");
+        pnlCuerpo.add(lblHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
 
         txtDescuento.setBackground(java.awt.SystemColor.control);
         txtDescuento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
@@ -123,7 +123,11 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
         pnlCuerpo.add(lblDescuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         txtHoras.setBackground(java.awt.SystemColor.control);
+        txtHoras.setForeground(new java.awt.Color(0, 0, 0));
+        txtHoras.setToolTipText("");
         txtHoras.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
+        txtHoras.setCaretColor(new java.awt.Color(0, 0, 0));
+        txtHoras.setCaretPosition(0);
         txtHoras.setPreferredSize(new java.awt.Dimension(3, 13));
         txtHoras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
