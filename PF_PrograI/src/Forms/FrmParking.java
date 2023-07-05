@@ -5,6 +5,7 @@
 package Forms;
 
 import static Clases.ClsGlobales.formPrincipal;
+import Clases.ClsVehiculos;
 import DB.ClsDB;
 import java.util.ArrayList;
 import javax.swing.JButton;
@@ -18,6 +19,11 @@ public class FrmParking extends javax.swing.JFrame {
     /**
      * Creates new form FrmParking
      */
+    
+    private void updateText(int i){
+        ClsVehiculos vehiculo = ClsDB.arregloVehiculos[i];
+        jInfo.setText(vehiculo.aString());
+    }
     public FrmParking() {
         initComponents();
         setTitle("View Parqueo");
@@ -33,10 +39,10 @@ public class FrmParking extends javax.swing.JFrame {
         for (int i = 0; i < buttonArray.length; i++) {
             int index = i;
             JButton button = buttonArray[i];
-
+            final int j = i;
             button.addActionListener(e -> {
                 // Button click event handler
-                System.out.println("Button clicked: " + button.getText() + " (Index: " + index + ")");
+                updateText(j);
             });
 
             // Check if ClsDB.arregloVehiculos has a null reference at the index
@@ -74,6 +80,9 @@ public class FrmParking extends javax.swing.JFrame {
         lblParqueo = new javax.swing.JLabel();
         lblTitulo = new javax.swing.JLabel();
         btnRegreso = new javax.swing.JButton();
+        lblTitulo1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jInfo = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -215,8 +224,8 @@ public class FrmParking extends javax.swing.JFrame {
         pnlCentral.add(lblParqueo, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 56, -1, 563));
 
         lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblTitulo.setText("Parqueo Salchichón");
-        pnlCentral.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 6, 243, -1));
+        lblTitulo.setText("Información");
+        pnlCentral.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 20, 243, -1));
 
         btnRegreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png"))); // NOI18N
         btnRegreso.addActionListener(new java.awt.event.ActionListener() {
@@ -224,14 +233,24 @@ public class FrmParking extends javax.swing.JFrame {
                 btnRegresoActionPerformed(evt);
             }
         });
-        pnlCentral.add(btnRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 620, -1, -1));
+        pnlCentral.add(btnRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 580, 330, -1));
+
+        lblTitulo1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblTitulo1.setText("Parqueo Salchichón");
+        pnlCentral.add(lblTitulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 6, 243, -1));
+
+        jInfo.setEditable(false);
+        jInfo.setBackground(new java.awt.Color(206, 227, 245));
+        jScrollPane1.setViewportView(jInfo);
+
+        pnlCentral.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 60, 330, 510));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(pnlCentral, javax.swing.GroupLayout.PREFERRED_SIZE, 972, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlCentral, javax.swing.GroupLayout.PREFERRED_SIZE, 1118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -346,8 +365,11 @@ public class FrmParking extends javax.swing.JFrame {
     private javax.swing.JButton btnEspacio8;
     private javax.swing.JButton btnEspacio9;
     private javax.swing.JButton btnRegreso;
+    private javax.swing.JTextPane jInfo;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblParqueo;
     private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblTitulo1;
     private javax.swing.JPanel pnlCentral;
     // End of variables declaration//GEN-END:variables
 
