@@ -35,8 +35,20 @@ public class ClsVehiculos {
         return lugarParqueo;
     }
     
+
     public void setLugarParqueo(int lugarParqueo){
         this.lugarParqueo = lugarParqueo;
+    }
+    
+    public String aString() {
+        return "Lugar de parqueo: " + lugarParqueo + "\n" +
+                "ID del vehículo: " + IdVehiculo + "\n" +
+                "Placa: " + Placa + "\n" +
+                "Tipo: " + Tipo + "\n" +
+                "Dueño: " + duenno + "\n" +
+                "Descuento: " + descuento + "\n" +
+                "Activo: " + activo + "\n" +
+                "Entrada: " + entrada;
     }
     
     /****************************************
