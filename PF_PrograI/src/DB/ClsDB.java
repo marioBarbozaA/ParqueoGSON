@@ -16,5 +16,6 @@ public class ClsDB {
     
     public static ArrayList<ClsAcceso> jsonAcceso = new ArrayList<ClsAcceso>();
     public static ArrayList<ClsVehiculos> jsonVehiculos = new ArrayList<ClsVehiculos>();
+    public static ArrayList<ClsVehiculos> jsonVehiculosRetirados = new ArrayList<ClsVehiculos>();
     
 }
