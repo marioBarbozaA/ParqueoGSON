@@ -30,55 +30,148 @@ public class FrmParking extends javax.swing.JFrame {
     private void initComponents() {
 
         pnlCentral = new javax.swing.JPanel();
+        btnEspacio = new javax.swing.JButton();
+        btnEspacio1 = new javax.swing.JButton();
+        btnEspacio2 = new javax.swing.JButton();
+        btnEspacio3 = new javax.swing.JButton();
+        btnEspacio4 = new javax.swing.JButton();
+        btnEspacio5 = new javax.swing.JButton();
+        btnEspacio6 = new javax.swing.JButton();
+        btnEspacio7 = new javax.swing.JButton();
+        btnEspacio8 = new javax.swing.JButton();
+        btnEspacio9 = new javax.swing.JButton();
+        btnEspacio10 = new javax.swing.JButton();
+        btnEspacio11 = new javax.swing.JButton();
         lblParqueo = new javax.swing.JLabel();
         lblTitulo = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnRegreso = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        pnlCentral.setBackground(new java.awt.Color(0, 0, 0));
+        pnlCentral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnEspacio.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio.setBorderPainted(false);
+        btnEspacio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEspacioActionPerformed(evt);
+            }
+        });
+        pnlCentral.add(btnEspacio, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 70, 80));
+
+        btnEspacio1.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio1.setBorderPainted(false);
+        btnEspacio1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEspacio1ActionPerformed(evt);
+            }
+        });
+        pnlCentral.add(btnEspacio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 70, 80));
+
+        btnEspacio2.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio2.setBorderPainted(false);
+        btnEspacio2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEspacio2ActionPerformed(evt);
+            }
+        });
+        pnlCentral.add(btnEspacio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 70, 80));
+
+        btnEspacio3.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio3.setBorderPainted(false);
+        btnEspacio3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEspacio3ActionPerformed(evt);
+            }
+        });
+        pnlCentral.add(btnEspacio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 70, 80));
+
+        btnEspacio4.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio4.setBorderPainted(false);
+        btnEspacio4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEspacio4ActionPerformed(evt);
+            }
+        });
+        pnlCentral.add(btnEspacio4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 70, 80));
+
+        btnEspacio5.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio5.setBorderPainted(false);
+        btnEspacio5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEspacio5ActionPerformed(evt);
+            }
+        });
+        pnlCentral.add(btnEspacio5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, 70, 80));
+
+        btnEspacio6.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio6.setBorderPainted(false);
+        btnEspacio6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEspacio6ActionPerformed(evt);
+            }
+        });
+        pnlCentral.add(btnEspacio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, 70, 80));
+
+        btnEspacio7.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio7.setBorderPainted(false);
+        btnEspacio7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEspacio7ActionPerformed(evt);
+            }
+        });
+        pnlCentral.add(btnEspacio7, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 440, 70, 80));
+
+        btnEspacio8.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio8.setBorderPainted(false);
+        btnEspacio8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEspacio8ActionPerformed(evt);
+            }
+        });
+        pnlCentral.add(btnEspacio8, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 440, 70, 80));
+
+        btnEspacio9.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio9.setBorderPainted(false);
+        btnEspacio9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEspacio9ActionPerformed(evt);
+            }
+        });
+        pnlCentral.add(btnEspacio9, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 440, 70, 80));
+
+        btnEspacio10.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio10.setBorderPainted(false);
+        btnEspacio10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEspacio10ActionPerformed(evt);
+            }
+        });
+        pnlCentral.add(btnEspacio10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 70, 80));
+
+        btnEspacio11.setBackground(new java.awt.Color(116, 172, 15));
+        btnEspacio11.setBorderPainted(false);
+        btnEspacio11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEspacio11ActionPerformed(evt);
+            }
+        });
+        pnlCentral.add(btnEspacio11, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 70, 80));
 
         lblParqueo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Parqueo.png"))); // NOI18N
+        pnlCentral.add(lblParqueo, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 56, -1, 563));
 
         lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblTitulo.setText("         Parqueito");
+        pnlCentral.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 6, 243, -1));
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnRegreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png"))); // NOI18N
+        btnRegreso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnRegresoActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout pnlCentralLayout = new javax.swing.GroupLayout(pnlCentral);
-        pnlCentral.setLayout(pnlCentralLayout);
-        pnlCentralLayout.setHorizontalGroup(
-            pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlCentralLayout.createSequentialGroup()
-                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlCentralLayout.createSequentialGroup()
-                        .addGap(247, 247, 247)
-                        .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlCentralLayout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(lblParqueo, javax.swing.GroupLayout.PREFERRED_SIZE, 708, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlCentralLayout.createSequentialGroup()
-                        .addGap(369, 369, 369)
-                        .addComponent(jButton1)))
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
-        pnlCentralLayout.setVerticalGroup(
-            pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblTitulo)
-                .addGap(18, 18, 18)
-                .addComponent(lblParqueo, javax.swing.GroupLayout.PREFERRED_SIZE, 563, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        pnlCentral.add(btnRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 620, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -94,10 +187,58 @@ public class FrmParking extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnRegresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresoActionPerformed
         formPrincipal.show();
         this.hide();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnRegresoActionPerformed
+
+    private void btnEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEspacioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEspacioActionPerformed
+
+    private void btnEspacio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEspacio1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEspacio1ActionPerformed
+
+    private void btnEspacio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEspacio2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEspacio2ActionPerformed
+
+    private void btnEspacio3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEspacio3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEspacio3ActionPerformed
+
+    private void btnEspacio4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEspacio4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEspacio4ActionPerformed
+
+    private void btnEspacio5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEspacio5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEspacio5ActionPerformed
+
+    private void btnEspacio6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEspacio6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEspacio6ActionPerformed
+
+    private void btnEspacio7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEspacio7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEspacio7ActionPerformed
+
+    private void btnEspacio8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEspacio8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEspacio8ActionPerformed
+
+    private void btnEspacio9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEspacio9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEspacio9ActionPerformed
+
+    private void btnEspacio10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEspacio10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEspacio10ActionPerformed
+
+    private void btnEspacio11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEspacio11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEspacio11ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,7 +276,19 @@ public class FrmParking extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnEspacio;
+    private javax.swing.JButton btnEspacio1;
+    private javax.swing.JButton btnEspacio10;
+    private javax.swing.JButton btnEspacio11;
+    private javax.swing.JButton btnEspacio2;
+    private javax.swing.JButton btnEspacio3;
+    private javax.swing.JButton btnEspacio4;
+    private javax.swing.JButton btnEspacio5;
+    private javax.swing.JButton btnEspacio6;
+    private javax.swing.JButton btnEspacio7;
+    private javax.swing.JButton btnEspacio8;
+    private javax.swing.JButton btnEspacio9;
+    private javax.swing.JButton btnRegreso;
     private javax.swing.JLabel lblParqueo;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel pnlCentral;

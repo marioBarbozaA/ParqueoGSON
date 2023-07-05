@@ -1,1 +1,0 @@
-[{"IdConductor":1,"Cedula":"204120221","Nombre":"Mainor","Apellidos":"Solorzano Brenes","Telefono":"60031012","Correo":"mai@gmail.com","Cuenta":"CR03015215132215848351"},{"IdConductor":2,"Cedula":"206480978","Nombre":"Mariano","Apellidos":"Rojas Rojas","Telefono":"61412121","Correo":"mariano@gmail.com","Cuenta":"CR6001613515351835155"}]
