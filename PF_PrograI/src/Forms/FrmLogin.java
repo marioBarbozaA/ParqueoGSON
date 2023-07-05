@@ -9,10 +9,6 @@ import DB.ClsDB;
 import Clases.ClsGlobales;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author juand
- */
 public class FrmLogin extends javax.swing.JFrame {
     
     ClsAcceso MiAcceso = new ClsAcceso();

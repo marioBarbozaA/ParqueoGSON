@@ -4,6 +4,7 @@
  */
 package Clases;
 
+import Forms.FrmParking;
 import Forms.FrmPrincipal;
 import Forms.FrmVehiculos;
 import java.util.regex.Matcher;
@@ -18,6 +19,8 @@ public class ClsGlobales {
     public static FrmPrincipal formPrincipal = new FrmPrincipal();
    
     public static FrmVehiculos fVehiculos = new FrmVehiculos();
+    
+    public static FrmParking fParking = new FrmParking();
     
     public static boolean ValidarMail(String email) {
         // Patron para validar el email
