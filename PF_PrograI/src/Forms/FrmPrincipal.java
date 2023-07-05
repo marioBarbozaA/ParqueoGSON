@@ -100,7 +100,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 btnViewActionPerformed(evt);
             }
         });
-        jPanel1.add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 80, 70));
+        jPanel1.add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 80, 70));
 
         btnCierre.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         btnCierre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cashier.png"))); // NOI18N
