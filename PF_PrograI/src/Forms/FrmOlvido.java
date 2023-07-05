@@ -5,6 +5,7 @@
 package Forms;
 
 import Clases.ClsGlobales;
+import Clases.SendEmail;
 import javax.swing.JOptionPane;
 
 /**
@@ -122,6 +123,17 @@ public class FrmOlvido extends javax.swing.JFrame {
             if (!this.txtCorreo.getText().equals("")) {
 
                 if (MiAcceso.RecuperarClave(this.txtCorreo.getText())) {
+                    
+                    String recipient = this.txtCorreo.getText();
+                    String subject = "Recuperación de contraseña";
+                    String body = "Estimado usuario,\n\nHemos recibido una solicitud para recuperar la contraseña de su cuenta."
+                    + " Si no ha solicitado esto, puede ignorar este mensaje. "
+                    + "Su contraseña es 123";
+                    SendEmail.send(recipient, subject, body);
+                    JOptionPane.showMessageDialog(
+                            null, 
+                            "Se ha enviado un correo electrónico para recuperar su clave.", "Recuperar clave de acceso",
+                            JOptionPane.INFORMATION_MESSAGE);
                     RegresarLogin();
                 }
 
