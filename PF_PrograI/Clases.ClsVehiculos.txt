@@ -1,1 +1,0 @@
-[{"IdVehiculo":1,"Placa":"LDF-131","Tipo":"Automóvil"},{"IdVehiculo":2,"Placa":"JDF-789","Tipo":"Automóvil"},{"IdVehiculo":3,"Placa":"123","Tipo":"PickUp"},{"IdVehiculo":4,"Placa":"123","Tipo":"PickUp"},{"IdVehiculo":5,"Placa":"abc","Tipo":"PickUp","duenno":"1558"}]

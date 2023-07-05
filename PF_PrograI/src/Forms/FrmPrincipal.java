@@ -45,7 +45,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         desktopPane = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
         btnAccesos = new javax.swing.JButton();
-        btnClientes = new javax.swing.JButton();
         btnCierre = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -86,22 +85,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         });
         jPanel1.add(btnAccesos, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 80, 70));
 
-        btnClientes.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        btnClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/usuarios.png"))); // NOI18N
-        btnClientes.setText("Clientes");
-        btnClientes.setToolTipText("");
-        btnClientes.setBorder(null);
-        btnClientes.setBorderPainted(false);
-        btnClientes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnClientes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnClientes.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnClientes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClientesActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, 70));
-
         btnCierre.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         btnCierre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cashier.png"))); // NOI18N
         btnCierre.setText("Cierre");
@@ -116,7 +99,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 btnCierreActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCierre, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 80, 70));
+        jPanel1.add(btnCierre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 80, 70));
 
         btnSalir.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/detener.png"))); // NOI18N
@@ -151,7 +134,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 btnVehiculosActionPerformed(evt);
             }
         });
-        jPanel1.add(btnVehiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 80, 70));
+        jPanel1.add(btnVehiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 80, 70));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoazul.jpg"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 90));
@@ -280,18 +263,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnAccesosActionPerformed
 
-    private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
-        
-        desktopPane.removeAll();
-        
-        desktopPane.add(ClsGlobales.fClientes);
-        ClsGlobales.fClientes.setVisible(true);
-        try{
-            ClsGlobales.fClientes.setMaximum(true);
-        }catch(Exception e){}
-        
-    }//GEN-LAST:event_btnClientesActionPerformed
-
     private void mnuConductoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuConductoresActionPerformed
     }//GEN-LAST:event_mnuConductoresActionPerformed
 
@@ -308,7 +279,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVehiculosActionPerformed
 
     private void mnuClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuClientesActionPerformed
-        btnClientesActionPerformed(null);
     }//GEN-LAST:event_mnuClientesActionPerformed
 
     private void mnuVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuVehiculosActionPerformed
@@ -366,7 +336,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAccesos;
     private javax.swing.JButton btnCierre;
-    private javax.swing.JButton btnClientes;
     private javax.swing.JButton btnSalir;
     private javax.swing.JButton btnVehiculos;
     private javax.swing.JDesktopPane desktopPane;

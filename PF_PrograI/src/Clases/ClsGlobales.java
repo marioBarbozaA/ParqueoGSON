@@ -4,7 +4,6 @@
  */
 package Clases;
 
-import Forms.FrmClientes;
 import Forms.FrmPrincipal;
 import Forms.FrmVehiculos;
 import java.util.regex.Matcher;
@@ -18,7 +17,6 @@ public class ClsGlobales {
     
     public static FrmPrincipal formPrincipal = new FrmPrincipal();
    
-    public static FrmClientes fClientes = new FrmClientes();
     public static FrmVehiculos fVehiculos = new FrmVehiculos();
     
     public static boolean ValidarMail(String email) {

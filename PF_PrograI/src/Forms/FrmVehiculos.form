@@ -93,8 +93,8 @@
               <Table columnCount="6" rowCount="0">
                 <Column editable="false" title="Id" type="java.lang.Integer"/>
                 <Column editable="false" title="Placa" type="java.lang.String"/>
-                <Column editable="false" title="Due&#xf1;o" type="java.lang.String"/>
                 <Column editable="false" title="Descuento" type="java.lang.String"/>
+                <Column editable="false" title="Due&#xf1;o" type="java.lang.String"/>
                 <Column editable="false" title="Horas" type="java.lang.String"/>
                 <Column editable="false" title="Tipo" type="java.lang.String"/>
               </Table>

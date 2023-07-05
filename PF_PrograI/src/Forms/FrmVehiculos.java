@@ -41,7 +41,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
                                         MiVehiculo.Placa,
                                         MiVehiculo.descuento,
                                         MiVehiculo.duenno,
-                                        MiVehiculo.horas,
+                                        MiVehiculo.entrada,
                                         MiVehiculo.Tipo};
             
             if (buscar.equals("")) {
@@ -49,7 +49,6 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
             }else if (MiVehiculo.Placa.toLowerCase().contains(buscar) ||
                       MiVehiculo.descuento.toLowerCase().contains(buscar) ||
                       MiVehiculo.duenno.toLowerCase().contains(buscar) ||
-                      MiVehiculo.horas.toLowerCase().contains(buscar) ||
                       MiVehiculo.Tipo.toLowerCase().contains(buscar)) {
                       modelo.addRow(row);
             }
@@ -82,7 +81,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "Id", "Placa", "Dueño", "Descuento", "Horas", "Tipo"
+                "Id", "Placa", "Descuento", "Dueño", "Horas", "Tipo"
             }
         ) {
             Class[] types = new Class [] {
@@ -254,7 +253,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
                 fAgregarVehiculo.txtPlaca.setText(ClsDB.jsonVehiculos.get(IdEditar).Placa);
                 fAgregarVehiculo.txtDescuento.setText(ClsDB.jsonVehiculos.get(IdEditar).descuento);
                 fAgregarVehiculo.txtDuenno.setText(ClsDB.jsonVehiculos.get(IdEditar).duenno);
-                fAgregarVehiculo.txtHoras.setText(ClsDB.jsonVehiculos.get(IdEditar).horas);
+                fAgregarVehiculo.txtHoras.setText(ClsDB.jsonVehiculos.get(IdEditar).entrada.toString());
                 fAgregarVehiculo.cmbTipo.setSelectedItem(ClsDB.jsonVehiculos.get(IdEditar).Tipo);
                 fAgregarVehiculo.btnGuardar.setText("EDITAR VEHÍCULO");
                 
