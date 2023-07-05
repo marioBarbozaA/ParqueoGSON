@@ -233,7 +233,7 @@ public class FrmParking extends javax.swing.JFrame {
                 btnRegresoActionPerformed(evt);
             }
         });
-        pnlCentral.add(btnRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 580, 330, -1));
+        pnlCentral.add(btnRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 330, 330, -1));
 
         lblTitulo1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblTitulo1.setText("Parqueo Salchichón");
@@ -243,7 +243,7 @@ public class FrmParking extends javax.swing.JFrame {
         jInfo.setBackground(new java.awt.Color(206, 227, 245));
         jScrollPane1.setViewportView(jInfo);
 
-        pnlCentral.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 60, 330, 510));
+        pnlCentral.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 60, 330, 240));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
