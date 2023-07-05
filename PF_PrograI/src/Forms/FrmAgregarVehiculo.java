@@ -3,7 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Forms;
-
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 import Clases.ClsGlobales;
 import Clases.ClsVehiculos;
 import DB.ClsDB;
@@ -25,13 +28,21 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
     }
     
     private boolean ValidarDatos(){
-        
         boolean Validado = true;
+        String regex = "^\\d{2}/\\d{2}/\\d{4} \\d{2}:\\d{2}:\\d{2}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher;
+        if (!txtHoras.getText().isEmpty()) {
+            
+            matcher = pattern.matcher(txtHoras.getText());
+            if (!matcher.matches()) 
+                Validado = false;
+            
+        }
         
         if (txtPlaca.getText().isEmpty() ||
             txtDescuento.getText().isEmpty() ||
-            txtDuenno.getText().isEmpty() ||
-            txtHoras.getText().isEmpty()
+            txtDuenno.getText().isEmpty() || txtHoras.getText().isEmpty()
             ) 
         {
             Validado = false;
@@ -88,7 +99,7 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
 
         lblHoras.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         lblHoras.setForeground(new java.awt.Color(0, 0, 0));
-        lblHoras.setText("Horas");
+        lblHoras.setText("Fecha entrada");
         pnlCuerpo.add(lblHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
         txtDescuento.setBackground(java.awt.SystemColor.control);
@@ -114,6 +125,11 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
         txtHoras.setBackground(java.awt.SystemColor.control);
         txtHoras.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
         txtHoras.setPreferredSize(new java.awt.Dimension(3, 13));
+        txtHoras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtHorasActionPerformed(evt);
+            }
+        });
         pnlCuerpo.add(txtHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 230, 30));
 
         lblTelefono.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -153,7 +169,7 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
         btnGuardar.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         btnGuardar.setForeground(java.awt.SystemColor.control);
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/check.png"))); // NOI18N
-        btnGuardar.setText("GUARDAR CLIENTE");
+        btnGuardar.setText("GUARDAR VEHICULO");
         btnGuardar.setActionCommand("");
         btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
@@ -165,6 +181,11 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
 
         cmbTipo.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         cmbTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Motocicleta", "Automóvil", "PickUp", "Camión" }));
+        cmbTipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbTipoActionPerformed(evt);
+            }
+        });
         pnlCuerpo.add(cmbTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 230, 30));
 
         lblNombre1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -192,7 +213,7 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        
+
         this.setAlwaysOnTop(false);
         
         if (ValidarDatos()) {
@@ -202,7 +223,7 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
                 ClsDB.jsonVehiculos.get(IdEditar).Placa = txtPlaca.getText();
                 ClsDB.jsonVehiculos.get(IdEditar).duenno = txtDuenno.getText();
                 ClsDB.jsonVehiculos.get(IdEditar).descuento = txtDescuento.getText();
-                ClsDB.jsonVehiculos.get(IdEditar).horas = txtHoras.getText();
+                ClsDB.jsonVehiculos.get(IdEditar).entrada = txtHoras.getText();
                 ClsDB.jsonVehiculos.get(IdEditar).Tipo = cmbTipo.getSelectedItem().toString();
 
             }else{
@@ -210,7 +231,7 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
                 MisVehiculos.Placa = txtPlaca.getText();
                 MisVehiculos.duenno = txtDuenno.getText();
                 MisVehiculos.descuento = txtDescuento.getText();
-                MisVehiculos.horas = txtHoras.getText();
+                MisVehiculos.entrada = txtHoras.getText();
                 MisVehiculos.Tipo = cmbTipo.getSelectedItem().toString();
 
                 ClsDB.jsonVehiculos.add(MisVehiculos);
@@ -249,6 +270,14 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
         ClsGlobales.formPrincipal.enable(true);
         ClsGlobales.formPrincipal.show();
     }//GEN-LAST:event_formWindowClosed
+
+    private void txtHorasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHorasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtHorasActionPerformed
+
+    private void cmbTipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbTipoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbTipoActionPerformed
 
     /**
      * @param args the command line arguments

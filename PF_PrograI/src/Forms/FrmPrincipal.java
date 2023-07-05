@@ -116,7 +116,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 btnCierreActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCierre, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 80, 70));
+        jPanel1.add(btnCierre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 80, 70));
 
         btnSalir.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/detener.png"))); // NOI18N
@@ -151,7 +151,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 btnVehiculosActionPerformed(evt);
             }
         });
-        jPanel1.add(btnVehiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 80, 70));
+        jPanel1.add(btnVehiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 80, 70));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoazul.jpg"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 90));

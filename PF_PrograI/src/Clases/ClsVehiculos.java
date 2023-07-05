@@ -5,7 +5,9 @@
 package Clases;
 
 import DB.ClsDB;
+import java.time.LocalDateTime;
 import com.google.gson.Gson;
+import com.google.gson.annotations.Expose;
 import com.google.gson.reflect.TypeToken;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -24,7 +26,9 @@ public class ClsVehiculos {
     public String Tipo;
     public String duenno ;
     public String descuento;
-    public String horas;
+    public boolean activo;
+    public String entrada;
+    public String salida;
     
     
     
