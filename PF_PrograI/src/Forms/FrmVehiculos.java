@@ -3,7 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
 package Forms;
-
+import java.time.LocalDateTime;
+import java.time.Duration;
+import java.time.format.DateTimeFormatter;
 import Clases.ClsGlobales;
 import Clases.ClsVehiculos;
 import DB.ClsDB;
@@ -71,7 +73,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
         btnAgregar = new javax.swing.JButton();
         txtBuscar = new javax.swing.JTextField();
         btnEditar = new javax.swing.JButton();
-        btnEditar1 = new javax.swing.JButton();
+        btnCobrar = new javax.swing.JButton();
 
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jLabel2.setText("Buscar vehículo");
@@ -81,7 +83,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "Id", "Placa", "Descuento", "Dueño", "Horas", "Tipo"
+                "Id", "Placa", "Descuento", "Dueño", "Entrada", "Tipo"
             }
         ) {
             Class[] types = new Class [] {
@@ -113,7 +115,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
         }
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel1.setText("Listado de vehículos");
+        jLabel1.setText("Vehículos parqueados");
 
         btnAgregar.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/agregar.png"))); // NOI18N
@@ -149,17 +151,17 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
             }
         });
 
-        btnEditar1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        btnEditar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cobrar.png"))); // NOI18N
-        btnEditar1.setText("Cobrar");
-        btnEditar1.setToolTipText("");
-        btnEditar1.setBorder(null);
-        btnEditar1.setBorderPainted(false);
-        btnEditar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEditar1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btnEditar1.addActionListener(new java.awt.event.ActionListener() {
+        btnCobrar.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        btnCobrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cobrar.png"))); // NOI18N
+        btnCobrar.setText("Cobrar");
+        btnCobrar.setToolTipText("");
+        btnCobrar.setBorder(null);
+        btnCobrar.setBorderPainted(false);
+        btnCobrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCobrar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnCobrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditar1ActionPerformed(evt);
+                btnCobrarActionPerformed(evt);
             }
         });
 
@@ -179,7 +181,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnEditar1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnCobrar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -197,7 +199,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnEditar1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnCobrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(44, 44, 44)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -233,11 +235,10 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtBuscarKeyTyped
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-
         if (IdEditar > 0 && IdEditar <= ClsDB.jsonVehiculos.size()) {
 
             if (!fAgregarVehiculo.isShowing()) {
-
+                System.out.println("entro");
                 int Contador = 0;
                 
                 for (ClsVehiculos MiVehiculo : ClsDB.jsonVehiculos) {
@@ -270,20 +271,89 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_btnEditarActionPerformed
 
+    private double calcularMontoCobrado(ClsVehiculos vehiculo) {
+    // Realizar el cálculo del monto a cobrar para el vehículo
+    // Puedes implementar aquí tu lógica personalizada para el cálculo
+    
+    // Ejemplo de cálculo: monto = horas estacionadas * tarifa por hora
+    double horasEstacionadas = obtenerHorasEstacionadas(vehiculo);
+    double tarifaPorHora = obtenerTarifaPorHora(vehiculo);
+        System.out.println(horasEstacionadas);
+    double montoCobrado = horasEstacionadas * tarifaPorHora;
+    
+    return montoCobrado;
+}
+
+    private double obtenerHorasEstacionadas(ClsVehiculos vehiculo) {
+        String patron = "dd/MM/yyyy HH:mm:ss";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(patron);
+        LocalDateTime fechaHora = LocalDateTime.parse(vehiculo.entrada, formatter);
+
+        // Implementar la lógica para obtener las horas estacionadas del vehículo
+        // Puedes utilizar el campo 'entrada' del vehículo y la fecha/hora actual
+    
+     // Ejemplo de obtención de horas estacionadas:
+        LocalDateTime horaActual = LocalDateTime.now();
+        
+        Duration duracion = Duration.between(fechaHora, horaActual);
+        long horasEstacionadas = duracion.toHours();
+    
+        return horasEstacionadas;
+    }
+
+    private double obtenerTarifaPorHora(ClsVehiculos vehiculo) {
+        // Implementar la lógica para obtener la tarifa por hora según el tipo de vehículo
+        // Puedes utilizar el campo 'Tipo' del vehículo para determinar la tarifa
+
+        // Ejemplo de obtención de tarifa por hora según el tipo de vehículo:
+        double tarifa = 0.0;
+
+        switch (vehiculo.Tipo) {
+            case "Automóvil":
+                tarifa = 10.0; // Tarifa para automóviles
+                break;
+            case "Motocicleta":
+                tarifa = 5.0; // Tarifa para motocicletas
+                break;
+            case "PickUp":
+                tarifa = 15.0;
+            case "Camión":
+                tarifa = 20.0;
+            default:
+                tarifa = 25.0; // Tarifa para otros tipos de vehículo
+                break;
+        }
+        return tarifa;
+    }
+
     private void tblVehiculosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblVehiculosMouseClicked
         int fila = evt.getY()/tblVehiculos.getRowHeight();
         IdEditar =  Integer.parseInt(tblVehiculos.getValueAt(fila, 0).toString());
     }//GEN-LAST:event_tblVehiculosMouseClicked
 
-    private void btnEditar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditar1ActionPerformed
+    private void btnCobrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCobrarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditar1ActionPerformed
+         System.out.println(IdEditar);
+        if (IdEditar > 0 && IdEditar <= ClsDB.jsonVehiculos.size()) {
+            ClsVehiculos vehiculo = ClsDB.jsonVehiculos.get(IdEditar-1);
+
+            // Realizar el cálculo del monto a cobrar para el vehículo seleccionado
+            double montoCobrado = calcularMontoCobrado(vehiculo) - Float.parseFloat(ClsDB.jsonVehiculos.get(IdEditar-1).descuento);
+
+            // Mostrar un mensaje con el monto cobrado
+            JOptionPane.showMessageDialog(null, "Monto cobrado: $" + montoCobrado, "Cobro exitoso", JOptionPane.INFORMATION_MESSAGE);
+
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Por favor seleccione un vehículo para cobrar", "Cobro", JOptionPane.ERROR_MESSAGE);
+        }                           
+    }//GEN-LAST:event_btnCobrarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregar;
+    private javax.swing.JButton btnCobrar;
     private javax.swing.JButton btnEditar;
-    private javax.swing.JButton btnEditar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
