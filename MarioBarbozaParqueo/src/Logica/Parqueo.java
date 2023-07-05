@@ -36,7 +36,7 @@ public class Parqueo {
     
     public double sumarHorasAVehiculo(String placa, double horas){
         Vehiculo vehiculoBuscado = buscarVehiculo(placa);
-        
+        System.out.println("");
         if (vehiculoBuscado != null){
             double calculoHoras = vehiculoBuscado.getHoras()+horas;
             
