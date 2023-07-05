@@ -45,6 +45,9 @@ public class FrmParking extends javax.swing.JFrame {
         lblParqueo = new javax.swing.JLabel();
         lblTitulo = new javax.swing.JLabel();
         btnRegreso = new javax.swing.JButton();
+        lblTitulo1 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -162,8 +165,8 @@ public class FrmParking extends javax.swing.JFrame {
         pnlCentral.add(lblParqueo, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 56, -1, 563));
 
         lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblTitulo.setText("         Parqueito");
-        pnlCentral.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 6, 243, -1));
+        lblTitulo.setText("Información del Vehículo");
+        pnlCentral.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 70, 310, -1));
 
         btnRegreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png"))); // NOI18N
         btnRegreso.addActionListener(new java.awt.event.ActionListener() {
@@ -173,11 +176,19 @@ public class FrmParking extends javax.swing.JFrame {
         });
         pnlCentral.add(btnRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 620, -1, -1));
 
+        lblTitulo1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblTitulo1.setText("Parqueo Salchichón");
+        pnlCentral.add(lblTitulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 6, 243, -1));
+
+        jScrollPane2.setViewportView(jTextPane1);
+
+        pnlCentral.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 110, 280, 490));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlCentral, javax.swing.GroupLayout.DEFAULT_SIZE, 797, Short.MAX_VALUE)
+            .addComponent(pnlCentral, javax.swing.GroupLayout.DEFAULT_SIZE, 1123, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -289,8 +300,11 @@ public class FrmParking extends javax.swing.JFrame {
     private javax.swing.JButton btnEspacio8;
     private javax.swing.JButton btnEspacio9;
     private javax.swing.JButton btnRegreso;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JLabel lblParqueo;
     private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblTitulo1;
     private javax.swing.JPanel pnlCentral;
     // End of variables declaration//GEN-END:variables
 }

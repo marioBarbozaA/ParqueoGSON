@@ -21,6 +21,7 @@ import java.util.ArrayList;
  */
 public class ClsVehiculos {
     
+    public int lugarParqueo; // 0-11 
     public int IdVehiculo;
     public String Placa;
     public String Tipo;
@@ -30,8 +31,13 @@ public class ClsVehiculos {
     public String entrada;
     public String salida;
     
+    public int getLugarParqueo() {
+        return lugarParqueo;
+    }
     
-    
+    public void setLugarParqueo(int lugarParqueo){
+        this.lugarParqueo = lugarParqueo;
+    }
     
     /****************************************
      *                                      *
@@ -88,6 +94,7 @@ public class ClsVehiculos {
             ArrayList<ClsVehiculos> ListaGuardada = gson.fromJson(Result, listType);
             
             ClsDB.jsonVehiculos = ListaGuardada;
+            ClsDB.rellenarParqueo();
             
         } catch (Exception e) {}
         
