@@ -1,1 +1,1 @@
-[{"IdVehiculo":1,"Placa":"123-abc","Tipo":"Motocicleta","duenno":"155827897606","descuento":"0","activo":false,"entrada":"04/07/2023 15:30:45"}]
+[{"lugarParqueo":0,"IdVehiculo":1,"Placa":"123-abc","Tipo":"Motocicleta","duenno":"155827897606","descuento":"0","activo":false,"entrada":"04/07/2023 15:30:45"}]

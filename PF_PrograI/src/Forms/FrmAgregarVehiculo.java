@@ -217,32 +217,27 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-
+        ClsVehiculos vehi;
         this.setAlwaysOnTop(false);
         
         if (ValidarDatos()) {
             
             if (IdEditar > -1) {
-                
-                ClsDB.jsonVehiculos.get(IdEditar).Placa = txtPlaca.getText();
-                ClsDB.jsonVehiculos.get(IdEditar).duenno = txtDuenno.getText();
-                ClsDB.jsonVehiculos.get(IdEditar).descuento = txtDescuento.getText();
-                ClsDB.jsonVehiculos.get(IdEditar).entrada = txtHoras.getText();
-                ClsDB.jsonVehiculos.get(IdEditar).Tipo = cmbTipo.getSelectedItem().toString();
+                vehi = new ClsVehiculos();
+                vehi.Placa = txtPlaca.getText();
+                vehi.Tipo = cmbTipo.getSelectedItem().toString();
+                vehi.activo = true;
+                vehi.descuento = txtDescuento.getText();
+                vehi.entrada = txtHoras.getText();
+                vehi.duenno = txtDuenno.getText();
+                ClsDB.agregarVehiculo(vehi);
 
-            }else{
-                MisVehiculos.IdVehiculo = ClsDB.jsonVehiculos.size() + 1;
-                MisVehiculos.Placa = txtPlaca.getText();
-                MisVehiculos.duenno = txtDuenno.getText();
-                MisVehiculos.descuento = txtDescuento.getText();
-                MisVehiculos.entrada = txtHoras.getText();
-                MisVehiculos.Tipo = cmbTipo.getSelectedItem().toString();
 
-                if (!ClsDB.agregarVehiculo(MisVehiculos)){
-                    JOptionPane.showMessageDialog(null,
-                            "Parqueo lleno.",
-                            "Error",
-                            JOptionPane.ERROR_MESSAGE
+            if (!ClsDB.agregarVehiculo(MisVehiculos)){
+                JOptionPane.showMessageDialog(null,
+                  "Parqueo lleno.",
+                   "Error",
+               JOptionPane.ERROR_MESSAGE
                     );
                     
                     this.dispose();

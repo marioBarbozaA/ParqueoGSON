@@ -332,7 +332,8 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
 
     private void btnCobrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCobrarActionPerformed
         // TODO add your handling code here:
-         System.out.println(IdEditar);
+        
+        
         if (IdEditar > 0 && IdEditar <= ClsDB.jsonVehiculos.size()) {
             ClsVehiculos vehiculo = ClsDB.jsonVehiculos.get(IdEditar-1);
 
@@ -341,9 +342,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
 
             // Mostrar un mensaje con el monto cobrado
             JOptionPane.showMessageDialog(null, "Monto cobrado: $" + montoCobrado, "Cobro exitoso", JOptionPane.INFORMATION_MESSAGE);
-            ClsDB.jsonVehiculosRetirados.add(ClsDB.jsonVehiculos.get(IdEditar-1));
-            ClsDB.jsonVehiculosRetirados.get(IdEditar-1).GuardarDatosMemoriaRetirados();
-            ClsDB.jsonVehiculos.remove(IdEditar-1);
+            ClsDB.quitarVehiculo(vehiculo);
             ClsDB.jsonVehiculos.get(0).ObtenerDatosMemoria();
             
 
