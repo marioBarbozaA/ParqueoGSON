@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package Forms;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
@@ -221,7 +218,7 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
         this.setAlwaysOnTop(false);
         
         if (ValidarDatos()) {
-            
+            boolean noGuardado = true;
             if (IdEditar > -1) {
                 
                 ClsDB.jsonVehiculos.get(IdEditar).Placa = txtPlaca.getText();
@@ -229,6 +226,8 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
                 ClsDB.jsonVehiculos.get(IdEditar).descuento = txtDescuento.getText();
                 ClsDB.jsonVehiculos.get(IdEditar).entrada = txtHoras.getText();
                 ClsDB.jsonVehiculos.get(IdEditar).Tipo = cmbTipo.getSelectedItem().toString();
+                ClsDB.jsonVehiculos.get(IdEditar).activo = true;
+
 
             }else{
                 MisVehiculos.IdVehiculo = ClsDB.jsonVehiculos.size() + 1;
@@ -237,6 +236,7 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
                 MisVehiculos.descuento = txtDescuento.getText();
                 MisVehiculos.entrada = txtHoras.getText();
                 MisVehiculos.Tipo = cmbTipo.getSelectedItem().toString();
+                MisVehiculos.activo = true;
 
                 if (!ClsDB.agregarVehiculo(MisVehiculos)){
                     JOptionPane.showMessageDialog(null,
@@ -244,13 +244,13 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
                             "Error",
                             JOptionPane.ERROR_MESSAGE
                     );
-                    
+                    noGuardado = false;
                     this.dispose();
                     
                 }
             }
             
-            if (MisVehiculos.GuardarDatosMemoria()) {
+            if (MisVehiculos.GuardarDatosMemoria() && noGuardado == true){
 
                 JOptionPane.showMessageDialog(null, 
                     "Los datos del vehículo se han guardado con éxito", 

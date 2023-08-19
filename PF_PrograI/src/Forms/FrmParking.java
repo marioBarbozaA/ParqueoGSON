@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package Forms;
 
 import static Clases.ClsGlobales.formPrincipal;
@@ -16,10 +13,7 @@ import javax.swing.JButton;
 public class FrmParking extends javax.swing.JFrame {
     
 
-    /**
-     * Creates new form FrmParking
-     */
-    
+
     private void updateText(int i){
         ClsVehiculos vehiculo = ClsDB.arregloVehiculos[i];
         jInfo.setText(vehiculo.aString());

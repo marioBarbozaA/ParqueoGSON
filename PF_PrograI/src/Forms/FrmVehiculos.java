@@ -341,7 +341,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
 
             // Realizar el cálculo del monto a cobrar para el vehículo seleccionado
             double montoCobrado = calcularMontoCobrado(vehiculo) - Float.parseFloat(ClsDB.jsonVehiculos.get(IdEditar-1).descuento);
-
+            System.out.println(vehiculo.aString());
             // Mostrar un mensaje con el monto cobrado
             JOptionPane.showMessageDialog(null, "Monto cobrado: $" + montoCobrado, "Cobro exitoso", JOptionPane.INFORMATION_MESSAGE);
 
