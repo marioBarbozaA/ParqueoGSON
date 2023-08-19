@@ -44,7 +44,8 @@ public class ClsVehiculos {
                 "Dueño: " + duenno + "\n" +
                 "Descuento: " + descuento + "\n" +
                 "Activo: " + activo + "\n" +
-                "Entrada: " + entrada;
+                "Entrada: " + entrada + "\n" + 
+                "Salida: " + salida;
     }
     
     /****************************************
