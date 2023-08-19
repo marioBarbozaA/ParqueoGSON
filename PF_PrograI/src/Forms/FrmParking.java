@@ -64,7 +64,6 @@ public class FrmParking extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnEspacio6 = new javax.swing.JButton();
         pnlCentral = new javax.swing.JPanel();
         btnEspacio = new javax.swing.JButton();
         btnEspacio1 = new javax.swing.JButton();
@@ -72,6 +71,7 @@ public class FrmParking extends javax.swing.JFrame {
         btnEspacio3 = new javax.swing.JButton();
         btnEspacio4 = new javax.swing.JButton();
         btnEspacio5 = new javax.swing.JButton();
+        btnEspacio6 = new javax.swing.JButton();
         btnEspacio7 = new javax.swing.JButton();
         btnEspacio8 = new javax.swing.JButton();
         btnEspacio9 = new javax.swing.JButton();
@@ -83,16 +83,6 @@ public class FrmParking extends javax.swing.JFrame {
         lblTitulo1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jInfo = new javax.swing.JTextPane();
-
-        btnEspacio6.setBackground(new java.awt.Color(32, 32, 32));
-        btnEspacio6.setForeground(new java.awt.Color(20, 20, 20));
-        btnEspacio6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sambucci.png"))); // NOI18N
-        btnEspacio6.setBorderPainted(false);
-        btnEspacio6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEspacio6ActionPerformed(evt);
-            }
-        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -163,6 +153,17 @@ public class FrmParking extends javax.swing.JFrame {
             }
         });
         pnlCentral.add(btnEspacio5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 210, 40, 80));
+
+        btnEspacio6.setBackground(new java.awt.Color(32, 32, 32));
+        btnEspacio6.setForeground(new java.awt.Color(20, 20, 20));
+        btnEspacio6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sambucci.png"))); // NOI18N
+        btnEspacio6.setBorderPainted(false);
+        btnEspacio6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEspacio6ActionPerformed(evt);
+            }
+        });
+        pnlCentral.add(btnEspacio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 210, -1, -1));
 
         btnEspacio7.setBackground(new java.awt.Color(32, 32, 32));
         btnEspacio7.setForeground(new java.awt.Color(20, 20, 20));
