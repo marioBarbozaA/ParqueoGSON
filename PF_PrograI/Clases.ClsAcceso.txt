@@ -1,1 +1,1 @@
-[{"IdAcceso":1,"Correo":"admin@gmail.com","Clave":"123","Recordar":true,"Activo":true}]
+[{"IdAcceso":1,"Correo":"admin@gmail.com","Clave":"123","Recordar":false,"Activo":true},{"IdAcceso":2,"Correo":"marionetabar1@gmail.com","Clave":"123","Recordar":true,"Activo":true},{"IdAcceso":3,"Correo":"fabiarayasalas02@gmail.com","Clave":"123","Recordar":false,"Activo":true}]

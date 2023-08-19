@@ -16,26 +16,21 @@
                   <KeyStroke key="Shift+C"/>
                 </Property>
                 <Property name="mnemonic" type="int" value="115"/>
-                <Property name="label" type="java.lang.String" value="vista"/>
+                <Property name="text" type="java.lang.String" value="vista"/>
               </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Vista"/>
-                <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
-              </AccessibilityProperties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuClientesActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="mnuConductores">
+            <MenuItem class="javax.swing.JMenuItem" name="mnuVehiculos">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Shift+O"/>
+                  <KeyStroke key="Shift+V"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="vehiculos"/>
-                <Property name="actionCommand" type="java.lang.String" value="Vehiculos"/>
+                <Property name="text" type="java.lang.String" value="Mis veh&#xed;culos"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuConductoresActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuVehiculosActionPerformed"/>
               </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mnuEnvios">
@@ -44,7 +39,7 @@
                   <KeyStroke key="Shift+E"/>
                 </Property>
                 <Property name="mnemonic" type="int" value="97"/>
-                <Property name="text" type="java.lang.String" value="Cierre"/>
+                <Property name="text" type="java.lang.String" value="Mi cierre"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mnuEnviosActionPerformed"/>

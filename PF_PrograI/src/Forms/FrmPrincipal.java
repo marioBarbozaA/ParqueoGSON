@@ -1,4 +1,7 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/MDIApplication.java to edit this template
+ */
 package Forms;
 import Clases.ClsGlobales;
 import Forms.FrmLogin;
@@ -51,7 +54,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         mnuPrincipal = new javax.swing.JMenuBar();
         mnuArchivo = new javax.swing.JMenu();
         mnuClientes = new javax.swing.JMenuItem();
-        mnuConductores = new javax.swing.JMenuItem();
+        mnuVehiculos = new javax.swing.JMenuItem();
         mnuEnvios = new javax.swing.JMenuItem();
         mnuInfo = new javax.swing.JMenu();
         mnuAcerca = new javax.swing.JMenuItem();
@@ -159,29 +162,26 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         mnuClientes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
         mnuClientes.setMnemonic('s');
-        mnuClientes.setLabel("vista");
+        mnuClientes.setText("vista");
         mnuClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuClientesActionPerformed(evt);
             }
         });
         mnuArchivo.add(mnuClientes);
-        mnuClientes.getAccessibleContext().setAccessibleName("Vista");
-        mnuClientes.getAccessibleContext().setAccessibleDescription("");
 
-        mnuConductores.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        mnuConductores.setText("vehiculos");
-        mnuConductores.setActionCommand("Vehiculos");
-        mnuConductores.addActionListener(new java.awt.event.ActionListener() {
+        mnuVehiculos.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        mnuVehiculos.setText("Mis vehículos");
+        mnuVehiculos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuConductoresActionPerformed(evt);
+                mnuVehiculosActionPerformed(evt);
             }
         });
-        mnuArchivo.add(mnuConductores);
+        mnuArchivo.add(mnuVehiculos);
 
         mnuEnvios.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
         mnuEnvios.setMnemonic('a');
-        mnuEnvios.setText("Cierre");
+        mnuEnvios.setText("Mi cierre");
         mnuEnvios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuEnviosActionPerformed(evt);
@@ -270,9 +270,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnAccesosActionPerformed
 
-    private void mnuConductoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuConductoresActionPerformed
-    }//GEN-LAST:event_mnuConductoresActionPerformed
-
     private void btnVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVehiculosActionPerformed
         
         desktopPane.removeAll();
@@ -287,6 +284,10 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
     private void mnuClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuClientesActionPerformed
     }//GEN-LAST:event_mnuClientesActionPerformed
+
+    private void mnuVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuVehiculosActionPerformed
+        btnVehiculosActionPerformed(null);
+    }//GEN-LAST:event_mnuVehiculosActionPerformed
 
     private void mnuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuUsuariosActionPerformed
         btnAccesosActionPerformed(null);
@@ -356,12 +357,12 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu mnuArchivo;
     private javax.swing.JMenuItem mnuCerrar;
     private javax.swing.JMenuItem mnuClientes;
-    private javax.swing.JMenuItem mnuConductores;
     private javax.swing.JMenuItem mnuEnvios;
     private javax.swing.JMenu mnuInfo;
     private javax.swing.JMenuBar mnuPrincipal;
     private javax.swing.JMenu mnuSalir;
     private javax.swing.JMenuItem mnuUsuarios;
+    private javax.swing.JMenuItem mnuVehiculos;
     // End of variables declaration//GEN-END:variables
 
 }

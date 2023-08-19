@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Clases;
 
 import DB.ClsDB;
@@ -35,8 +31,20 @@ public class ClsVehiculos {
         return lugarParqueo;
     }
     
+
     public void setLugarParqueo(int lugarParqueo){
         this.lugarParqueo = lugarParqueo;
+    }
+    
+    public String aString() {
+        return "Lugar de parqueo: " + lugarParqueo + "\n" +
+                "ID del vehículo: " + IdVehiculo + "\n" +
+                "Placa: " + Placa + "\n" +
+                "Tipo: " + Tipo + "\n" +
+                "Dueño: " + duenno + "\n" +
+                "Descuento: " + descuento + "\n" +
+                "Activo: " + activo + "\n" +
+                "Entrada: " + entrada;
     }
     
     /****************************************
