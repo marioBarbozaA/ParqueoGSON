@@ -242,7 +242,9 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
                 int Contador = 0;
                 
                 for (ClsVehiculos MiVehiculo : ClsDB.jsonVehiculos) {
+                    System.out.println(IdEditar);
                     if (MiVehiculo.IdVehiculo == IdEditar) {
+                        System.out.println(IdEditar);
                         IdEditar = Contador;
                         break;
                     }
