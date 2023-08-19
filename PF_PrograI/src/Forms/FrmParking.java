@@ -153,7 +153,7 @@ public class FrmParking extends javax.swing.JFrame {
                 btnEspacio6ActionPerformed(evt);
             }
         });
-        pnlCentral.add(btnEspacio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 220, 30, 70));
+        pnlCentral.add(btnEspacio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 210, 40, 90));
 
         btnEspacio7.setBackground(new java.awt.Color(32, 32, 32));
         btnEspacio7.setForeground(new java.awt.Color(20, 20, 20));
@@ -226,8 +226,8 @@ public class FrmParking extends javax.swing.JFrame {
         pnlCentral.add(btnRegreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 330, 330, -1));
 
         lblTitulo1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lblTitulo1.setText("Parqueo Salchichón");
-        pnlCentral.add(lblTitulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(247, 6, 243, -1));
+        lblTitulo1.setText("Parqueo");
+        pnlCentral.add(lblTitulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 110, -1));
 
         jInfo.setEditable(false);
         jInfo.setBackground(new java.awt.Color(206, 227, 245));
@@ -253,7 +253,8 @@ public class FrmParking extends javax.swing.JFrame {
 
     private void btnRegresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresoActionPerformed
         formPrincipal.show();
-        this.hide();
+        
+        this.dispose();
     }//GEN-LAST:event_btnRegresoActionPerformed
 
     private void btnEspacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEspacioActionPerformed

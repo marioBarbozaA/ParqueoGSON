@@ -2,6 +2,8 @@ package DB;
 
 import Clases.ClsAcceso;
 import Clases.ClsVehiculos;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 
@@ -20,8 +22,19 @@ public class ClsDB {
         }
     }
     
+    
+    public static int contarParqueados(){
+        int con = 0;
+        for (ClsVehiculos vehiculo : jsonVehiculos){
+           if( vehiculo.activo == true)
+               con++;
+        }
+        return con;
+        
+    }
+    
     public static boolean agregarVehiculo(ClsVehiculos vehiculo){
-        if (jsonVehiculos.size() >= MAX_VEHICULOS) {
+        if ( contarParqueados() >= MAX_VEHICULOS) {
             return false;
         }
         jsonVehiculos.add(vehiculo);
@@ -37,10 +50,23 @@ public class ClsDB {
     int lugarParqueo = vehiculo.getLugarParqueo();
     if (lugarParqueo >= 0 && lugarParqueo < MAX_VEHICULOS) {
         arregloVehiculos[lugarParqueo] = null;
-        jsonVehiculos.remove(vehiculo);
+        
     }
 }
-
+    public static void ActualizarParqueo(ClsVehiculos vehiculo) {
+        
+        for (int i = 0; i <  jsonVehiculos.size(); i++) {
+            if (vehiculo.IdVehiculo == jsonVehiculos.get(i).IdVehiculo){
+                quitarVehiculo(jsonVehiculos.get(i));
+                jsonVehiculos.get(i).activo = false;
+                jsonVehiculos.get(i).lugarParqueo = -1;
+                jsonVehiculos.get(i).GuardarDatosMemoria();
+                
+            }
+            
+            };
+    }
+    
     
     private static int buscarPrimerIndiceNulo() {
         for (int i = 0; i < MAX_VEHICULOS; i++) {

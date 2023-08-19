@@ -39,6 +39,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
         modelo.setRowCount(0);
         
         for (ClsVehiculos MiVehiculo : ClsDB.jsonVehiculos) {
+            if (MiVehiculo.activo == true){
             Object[] row = new Object[]{MiVehiculo.IdVehiculo,
                                         MiVehiculo.Placa,
                                         MiVehiculo.descuento,
@@ -46,15 +47,16 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
                                         MiVehiculo.entrada,
                                         MiVehiculo.Tipo};
             
-            if (buscar.equals("")) {
-                modelo.addRow(row);
-            }else if (MiVehiculo.Placa.toLowerCase().contains(buscar) ||
+                if (buscar.equals("")) {
+                    modelo.addRow(row);
+                }else if (MiVehiculo.Placa.toLowerCase().contains(buscar) ||
                       MiVehiculo.descuento.toLowerCase().contains(buscar) ||
                       MiVehiculo.duenno.toLowerCase().contains(buscar) ||
                       MiVehiculo.Tipo.toLowerCase().contains(buscar)) {
                       modelo.addRow(row);
             }
-        }
+         }
+      }
     }
     
     /**
@@ -339,11 +341,11 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
         if (IdEditar > 0 && IdEditar <= ClsDB.jsonVehiculos.size()) {
             ClsVehiculos vehiculo = ClsDB.jsonVehiculos.get(IdEditar-1);
 
-            // Realizar el cálculo del monto a cobrar para el vehículo seleccionado
             double montoCobrado = calcularMontoCobrado(vehiculo) - Float.parseFloat(ClsDB.jsonVehiculos.get(IdEditar-1).descuento);
-            System.out.println(vehiculo.aString());
-            // Mostrar un mensaje con el monto cobrado
-            JOptionPane.showMessageDialog(null, "Monto cobrado: $" + montoCobrado, "Cobro exitoso", JOptionPane.INFORMATION_MESSAGE);
+            
+            ClsDB.ActualizarParqueo(vehiculo);
+            
+            JOptionPane.showMessageDialog(null ,vehiculo.duenno + "debe pagar: $" + montoCobrado, "Cobro exitoso", JOptionPane.INFORMATION_MESSAGE);
 
 
         } else {

@@ -25,7 +25,7 @@ public class ClsVehiculos {
     public String descuento;
     public boolean activo;
     public String entrada;
-    public String salida;
+    //public String salida;
     
     public int getLugarParqueo() {
         return lugarParqueo;
@@ -44,8 +44,8 @@ public class ClsVehiculos {
                 "Dueño: " + duenno + "\n" +
                 "Descuento: " + descuento + "\n" +
                 "Activo: " + activo + "\n" +
-                "Entrada: " + entrada +"\n" +
-                "Salida: " + salida +"\n";
+                "Entrada: " + entrada +"\n" ;
+                //"Salida: " + salida +"\n";
     } 
     
     /****************************************
