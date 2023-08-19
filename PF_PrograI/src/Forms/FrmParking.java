@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package Forms;
 
 import static Clases.ClsGlobales.formPrincipal;
@@ -9,17 +6,11 @@ import Clases.ClsVehiculos;
 import DB.ClsDB;
 import java.util.ArrayList;
 import javax.swing.JButton;
-/**
- *
- * @author mario
- */
+
 public class FrmParking extends javax.swing.JFrame {
     
 
-    /**
-     * Creates new form FrmParking
-     */
-    
+
     private void updateText(int i){
         ClsVehiculos vehiculo = ClsDB.arregloVehiculos[i];
         jInfo.setText(vehiculo.aString());
@@ -44,7 +35,6 @@ public class FrmParking extends javax.swing.JFrame {
                 // Button click event handler
                 updateText(j);
             });
-
             // Check if ClsDB.arregloVehiculos has a null reference at the index
             while (index < ClsDB.arregloVehiculos.length && ClsDB.arregloVehiculos[index] == null) {
                 button.setVisible(false);
@@ -64,7 +54,6 @@ public class FrmParking extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnEspacio6 = new javax.swing.JButton();
         pnlCentral = new javax.swing.JPanel();
         btnEspacio = new javax.swing.JButton();
         btnEspacio1 = new javax.swing.JButton();
@@ -72,6 +61,7 @@ public class FrmParking extends javax.swing.JFrame {
         btnEspacio3 = new javax.swing.JButton();
         btnEspacio4 = new javax.swing.JButton();
         btnEspacio5 = new javax.swing.JButton();
+        btnEspacio6 = new javax.swing.JButton();
         btnEspacio7 = new javax.swing.JButton();
         btnEspacio8 = new javax.swing.JButton();
         btnEspacio9 = new javax.swing.JButton();
@@ -83,16 +73,6 @@ public class FrmParking extends javax.swing.JFrame {
         lblTitulo1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jInfo = new javax.swing.JTextPane();
-
-        btnEspacio6.setBackground(new java.awt.Color(32, 32, 32));
-        btnEspacio6.setForeground(new java.awt.Color(20, 20, 20));
-        btnEspacio6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sambucci.png"))); // NOI18N
-        btnEspacio6.setBorderPainted(false);
-        btnEspacio6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEspacio6ActionPerformed(evt);
-            }
-        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -163,6 +143,17 @@ public class FrmParking extends javax.swing.JFrame {
             }
         });
         pnlCentral.add(btnEspacio5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 210, 40, 80));
+
+        btnEspacio6.setBackground(new java.awt.Color(32, 32, 32));
+        btnEspacio6.setForeground(new java.awt.Color(20, 20, 20));
+        btnEspacio6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sambucci.png"))); // NOI18N
+        btnEspacio6.setBorderPainted(false);
+        btnEspacio6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEspacio6ActionPerformed(evt);
+            }
+        });
+        pnlCentral.add(btnEspacio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 220, 30, 70));
 
         btnEspacio7.setBackground(new java.awt.Color(32, 32, 32));
         btnEspacio7.setForeground(new java.awt.Color(20, 20, 20));
@@ -317,11 +308,7 @@ public class FrmParking extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

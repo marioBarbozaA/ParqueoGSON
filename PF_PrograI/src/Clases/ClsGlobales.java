@@ -16,7 +16,7 @@ public class ClsGlobales {
    
     public static FrmVehiculos fVehiculos = new FrmVehiculos();
     
-    public static FrmParking fParking = new FrmParking();
+    //public static FrmParking fParking = new FrmParking();
     
     public static boolean ValidarMail(String email) {
         // Patron para validar el email

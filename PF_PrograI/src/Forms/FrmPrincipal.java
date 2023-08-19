@@ -46,7 +46,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btnAccesos = new javax.swing.JButton();
         btnView = new javax.swing.JButton();
-        btnCierre = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         btnVehiculos = new javax.swing.JButton();
@@ -99,23 +98,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 btnViewActionPerformed(evt);
             }
         });
-        jPanel1.add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 80, 70));
-
-        btnCierre.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        btnCierre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cashier.png"))); // NOI18N
-        btnCierre.setText("Cierre");
-        btnCierre.setToolTipText("");
-        btnCierre.setBorder(null);
-        btnCierre.setBorderPainted(false);
-        btnCierre.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCierre.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnCierre.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnCierre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCierreActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnCierre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 80, 70));
+        jPanel1.add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 80, 70));
 
         btnSalir.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/detener.png"))); // NOI18N
@@ -293,18 +276,12 @@ public class FrmPrincipal extends javax.swing.JFrame {
         btnAccesosActionPerformed(null);
     }//GEN-LAST:event_mnuUsuariosActionPerformed
 
-    private void btnCierreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCierreActionPerformed
-        
-        desktopPane.removeAll();
-        
-    }//GEN-LAST:event_btnCierreActionPerformed
-
     private void mnuEnviosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuEnviosActionPerformed
     }//GEN-LAST:event_mnuEnviosActionPerformed
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
-         
-        ClsGlobales.fParking.show();
+        FrmParking fParking = new FrmParking();
+        fParking.show();
         this.dispose();
     }//GEN-LAST:event_btnViewActionPerformed
 
@@ -345,7 +322,6 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAccesos;
-    private javax.swing.JButton btnCierre;
     private javax.swing.JButton btnSalir;
     private javax.swing.JButton btnVehiculos;
     private javax.swing.JButton btnView;
