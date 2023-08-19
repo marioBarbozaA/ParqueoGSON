@@ -6,10 +6,7 @@ import Clases.ClsVehiculos;
 import DB.ClsDB;
 import java.util.ArrayList;
 import javax.swing.JButton;
-/**
- *
- * @author mario
- */
+
 public class FrmParking extends javax.swing.JFrame {
     
 
@@ -38,7 +35,6 @@ public class FrmParking extends javax.swing.JFrame {
                 // Button click event handler
                 updateText(j);
             });
-
             // Check if ClsDB.arregloVehiculos has a null reference at the index
             while (index < ClsDB.arregloVehiculos.length && ClsDB.arregloVehiculos[index] == null) {
                 button.setVisible(false);
@@ -157,7 +153,7 @@ public class FrmParking extends javax.swing.JFrame {
                 btnEspacio6ActionPerformed(evt);
             }
         });
-        pnlCentral.add(btnEspacio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 210, -1, -1));
+        pnlCentral.add(btnEspacio6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 220, 30, 70));
 
         btnEspacio7.setBackground(new java.awt.Color(32, 32, 32));
         btnEspacio7.setForeground(new java.awt.Color(20, 20, 20));
@@ -312,11 +308,7 @@ public class FrmParking extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {

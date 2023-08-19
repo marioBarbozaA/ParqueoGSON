@@ -280,8 +280,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_mnuEnviosActionPerformed
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
-         
-        ClsGlobales.fParking.show();
+        FrmParking fParking = new FrmParking();
+        fParking.show();
         this.dispose();
     }//GEN-LAST:event_btnViewActionPerformed
 

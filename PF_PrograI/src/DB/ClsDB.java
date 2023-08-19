@@ -4,10 +4,7 @@ import Clases.ClsAcceso;
 import Clases.ClsVehiculos;
 import java.util.ArrayList;
 
-/**
- *
- * @author juand
- */
+
 public class ClsDB {
     private static final int MAX_VEHICULOS = 12;
     public static ClsVehiculos[] arregloVehiculos = new ClsVehiculos[MAX_VEHICULOS];
