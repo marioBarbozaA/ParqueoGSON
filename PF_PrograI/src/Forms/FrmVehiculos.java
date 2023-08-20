@@ -289,6 +289,8 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
         long horasEstacionadas = duracion.getSeconds();
         long exacto =(long) Math.ceil(horasEstacionadas/3600.0);
         System.out.println("duracion: " + duracion + "        horasEstacionadas: "+horasEstacionadas + "        exactp: "+exacto);
+        if (exacto == 0.0) {
+            return 1.0;}
         return exacto;
     }
 
