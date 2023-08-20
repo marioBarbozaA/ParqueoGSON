@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
+
 package Forms;
 import java.time.LocalDateTime;
 import java.time.Duration;
@@ -223,7 +220,6 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
             fAgregarVehiculo.txtPlaca.setText("");
             fAgregarVehiculo.txtDescuento.setText("");
             fAgregarVehiculo.txtDuenno.setText("");
-            fAgregarVehiculo.txtHoras.setText("");
             fAgregarVehiculo.btnGuardar.setText("GUARDAR VEHÍCULO");
         
             fAgregarVehiculo.show();
@@ -258,7 +254,6 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
                 fAgregarVehiculo.txtPlaca.setText(ClsDB.jsonVehiculos.get(IdEditar).Placa);
                 fAgregarVehiculo.txtDescuento.setText(ClsDB.jsonVehiculos.get(IdEditar).descuento);
                 fAgregarVehiculo.txtDuenno.setText(ClsDB.jsonVehiculos.get(IdEditar).duenno);
-                fAgregarVehiculo.txtHoras.setText(ClsDB.jsonVehiculos.get(IdEditar).entrada.toString());
                 fAgregarVehiculo.cmbTipo.setSelectedItem(ClsDB.jsonVehiculos.get(IdEditar).Tipo);
                 fAgregarVehiculo.btnGuardar.setText("EDITAR VEHÍCULO");
                 
@@ -345,7 +340,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
             
             ClsDB.ActualizarParqueo(vehiculo);
             
-            JOptionPane.showMessageDialog(null ,vehiculo.duenno + "debe pagar: $" + montoCobrado, "Cobro exitoso", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null ,vehiculo.duenno + " debe pagar: $" + montoCobrado, "Cobro exitoso", JOptionPane.INFORMATION_MESSAGE);
 
 
         } else {

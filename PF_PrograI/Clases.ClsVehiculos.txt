@@ -1,1 +1,1 @@
-[]
+[{"lugarParqueo":0,"IdVehiculo":1,"Placa":"www-000","Tipo":"Motocicleta","duenno":"juan","descuento":"0","activo":true,"entrada":"19/08/2023 17:57:08"},{"lugarParqueo":-1,"IdVehiculo":2,"Placa":"BQQ.420","Tipo":"PickUp","duenno":"Mario","descuento":"0","activo":false,"entrada":"19/08/2023 18:00:14"}]

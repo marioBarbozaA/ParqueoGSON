@@ -6,6 +6,8 @@ import java.util.regex.Matcher;
 import Clases.ClsGlobales;
 import Clases.ClsVehiculos;
 import DB.ClsDB;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import javax.swing.JOptionPane;
 
 /**
@@ -16,29 +18,16 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
     
     ClsVehiculos MisVehiculos = new ClsVehiculos();
     public int IdEditar = 0;
-    /**
-     * Creates new form FrmAgregarVehiculo
-     */
+
     public FrmAgregarVehiculo() {
         initComponents();
     }
     
     private boolean ValidarDatos(){
         boolean Validado = true;
-        String regex = "^\\d{2}/\\d{2}/\\d{4} \\d{2}:\\d{2}:\\d{2}$";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher;
-        if (!txtHoras.getText().isEmpty()) {
-            
-            matcher = pattern.matcher(txtHoras.getText());
-            if (!matcher.matches()) 
-                Validado = false;
-            
-        }
-        
         if (txtPlaca.getText().isEmpty() ||
             txtDescuento.getText().isEmpty() ||
-            txtDuenno.getText().isEmpty() || txtHoras.getText().isEmpty()
+            txtDuenno.getText().isEmpty()
             ) 
         {
             Validado = false;
@@ -51,7 +40,6 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
         txtPlaca.setText("");
         txtDescuento.setText("");
         txtDuenno.setText("");
-        txtHoras.setText("");
         cmbTipo.setSelectedIndex(0);
     }
 
@@ -65,12 +53,10 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
     private void initComponents() {
 
         pnlCuerpo = new javax.swing.JPanel();
-        lblHoras = new javax.swing.JLabel();
         txtDescuento = new javax.swing.JTextField();
         lblADuenno = new javax.swing.JLabel();
         txtDuenno = new javax.swing.JTextField();
         lblDescuento = new javax.swing.JLabel();
-        txtHoras = new javax.swing.JTextField();
         lblTelefono = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         btnCerrar = new javax.swing.JButton();
@@ -93,18 +79,12 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
 
         pnlCuerpo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblHoras.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        lblHoras.setForeground(new java.awt.Color(0, 0, 0));
-        lblHoras.setText("Fecha entrada (Formato: 04/07/2023 15:30:45)");
-        pnlCuerpo.add(lblHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
-
         txtDescuento.setBackground(java.awt.SystemColor.control);
         txtDescuento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
         txtDescuento.setPreferredSize(new java.awt.Dimension(3, 13));
         pnlCuerpo.add(txtDescuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 230, 30));
 
         lblADuenno.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        lblADuenno.setForeground(new java.awt.Color(0, 0, 0));
         lblADuenno.setText("Dueño");
         pnlCuerpo.add(lblADuenno, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, -1));
 
@@ -114,26 +94,10 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
         pnlCuerpo.add(txtDuenno, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 230, 30));
 
         lblDescuento.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        lblDescuento.setForeground(new java.awt.Color(0, 0, 0));
         lblDescuento.setText("Descuento");
         pnlCuerpo.add(lblDescuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
-        txtHoras.setBackground(java.awt.SystemColor.control);
-        txtHoras.setForeground(new java.awt.Color(0, 0, 0));
-        txtHoras.setToolTipText("");
-        txtHoras.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 1, true));
-        txtHoras.setCaretColor(new java.awt.Color(0, 0, 0));
-        txtHoras.setCaretPosition(0);
-        txtHoras.setPreferredSize(new java.awt.Dimension(3, 13));
-        txtHoras.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtHorasActionPerformed(evt);
-            }
-        });
-        pnlCuerpo.add(txtHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 230, 30));
-
         lblTelefono.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        lblTelefono.setForeground(new java.awt.Color(0, 0, 0));
         lblTelefono.setText("Tipo");
         pnlCuerpo.add(lblTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, -1, -1));
         pnlCuerpo.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 472, 10));
@@ -189,7 +153,6 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
         pnlCuerpo.add(cmbTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 230, 30));
 
         lblNombre1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        lblNombre1.setForeground(new java.awt.Color(0, 0, 0));
         lblNombre1.setText("Placa");
         pnlCuerpo.add(lblNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
@@ -223,17 +186,20 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
                 ClsDB.jsonVehiculos.get(IdEditar).Placa = txtPlaca.getText();
                 ClsDB.jsonVehiculos.get(IdEditar).duenno = txtDuenno.getText();
                 ClsDB.jsonVehiculos.get(IdEditar).descuento = txtDescuento.getText();
-                ClsDB.jsonVehiculos.get(IdEditar).entrada = txtHoras.getText();
                 ClsDB.jsonVehiculos.get(IdEditar).Tipo = cmbTipo.getSelectedItem().toString();
                 ClsDB.jsonVehiculos.get(IdEditar).activo = true;
 
 
             }else{
+                LocalDateTime fechaActual = LocalDateTime.now();
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+                String hoy = fechaActual.format(formatter);
+                
                 MisVehiculos.IdVehiculo = ClsDB.jsonVehiculos.size() + 1;
                 MisVehiculos.Placa = txtPlaca.getText();
                 MisVehiculos.duenno = txtDuenno.getText();
                 MisVehiculos.descuento = txtDescuento.getText();
-                MisVehiculos.entrada = txtHoras.getText();
+                MisVehiculos.entrada = hoy;
                 MisVehiculos.Tipo = cmbTipo.getSelectedItem().toString();
                 MisVehiculos.activo = true;
 
@@ -283,10 +249,6 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
         ClsGlobales.formPrincipal.show();
     }//GEN-LAST:event_formWindowClosed
 
-    private void txtHorasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHorasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtHorasActionPerformed
-
     private void cmbTipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbTipoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbTipoActionPerformed
@@ -335,14 +297,12 @@ public class FrmAgregarVehiculo extends javax.swing.JFrame {
     private javax.swing.JLabel lblADuenno;
     private javax.swing.JLabel lblBarraSup;
     private javax.swing.JLabel lblDescuento;
-    private javax.swing.JLabel lblHoras;
     private javax.swing.JLabel lblNombre1;
     private javax.swing.JLabel lblTelefono;
     private javax.swing.JLabel lblTitulo1;
     private javax.swing.JPanel pnlCuerpo;
     public javax.swing.JTextField txtDescuento;
     public javax.swing.JTextField txtDuenno;
-    public javax.swing.JTextField txtHoras;
     public javax.swing.JTextField txtPlaca;
     // End of variables declaration//GEN-END:variables
 }

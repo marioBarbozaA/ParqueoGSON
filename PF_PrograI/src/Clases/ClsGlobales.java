@@ -6,10 +6,7 @@ import Forms.FrmVehiculos;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- *
- * @author juand
- */
+
 public class ClsGlobales {
     
     public static FrmPrincipal formPrincipal = new FrmPrincipal();
