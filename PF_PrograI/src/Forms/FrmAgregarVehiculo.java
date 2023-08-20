@@ -1,8 +1,6 @@
 
 package Forms;
 
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
 import Clases.ClsGlobales;
 import Clases.ClsVehiculos;
 import DB.ClsDB;
@@ -10,10 +8,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author juand
- */
+
 public class FrmAgregarVehiculo extends javax.swing.JFrame {
     
     ClsVehiculos MisVehiculos = new ClsVehiculos();
