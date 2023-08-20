@@ -9,10 +9,7 @@ import DB.ClsDB;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author juand
- */
+
 public class FrmVehiculos extends javax.swing.JInternalFrame {
     
     ClsVehiculos MisVehiculos = new ClsVehiculos();
@@ -20,9 +17,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
     
     public int IdEditar = -1;
     
-    /**
-     * Creates new form FrmVehiculos
-     */
+  
     public FrmVehiculos() {
         initComponents();
         MisVehiculos.ObtenerDatosMemoria();
@@ -236,13 +231,10 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
         if (IdEditar > 0 && IdEditar <= ClsDB.jsonVehiculos.size()) {
 
             if (!fAgregarVehiculo.isShowing()) {
-                System.out.println("entro");
                 int Contador = 0;
                 
                 for (ClsVehiculos MiVehiculo : ClsDB.jsonVehiculos) {
-                    System.out.println(IdEditar);
                     if (MiVehiculo.IdVehiculo == IdEditar) {
-                        System.out.println(IdEditar);
                         IdEditar = Contador;
                         break;
                     }
@@ -277,7 +269,6 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
     // Ejemplo de cálculo: monto = horas estacionadas * tarifa por hora
     double horasEstacionadas = obtenerHorasEstacionadas(vehiculo);
     double tarifaPorHora = obtenerTarifaPorHora(vehiculo);
-        System.out.println(horasEstacionadas);
     double montoCobrado = horasEstacionadas * tarifaPorHora;
     
     return montoCobrado;
@@ -333,7 +324,6 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
 
     private void btnCobrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCobrarActionPerformed
         // TODO add your handling code here:
-         System.out.println(IdEditar);
         if (IdEditar > 0 && IdEditar <= ClsDB.jsonVehiculos.size()) {
             ClsVehiculos vehiculo = ClsDB.jsonVehiculos.get(IdEditar-1);
 
