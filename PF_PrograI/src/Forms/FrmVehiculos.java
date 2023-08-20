@@ -288,7 +288,6 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
         Duration duracion = Duration.between(fechaHora, horaActual);
         long horasEstacionadas = duracion.getSeconds();
         long exacto =(long) Math.ceil(horasEstacionadas/3600.0);
-        System.out.println("duracion: " + duracion + "        horasEstacionadas: "+horasEstacionadas + "        exactp: "+exacto);
         if (exacto == 0.0) {
             return 1.0;}
         return exacto;
@@ -332,7 +331,7 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
             double montoCobrado = calcularMontoCobrado(vehiculo) - Float.parseFloat(ClsDB.jsonVehiculos.get(IdEditar-1).descuento);
             
             ClsDB.ActualizarParqueo(vehiculo);
-            
+            montoCobrado = Math.max(0.0, montoCobrado);
             JOptionPane.showMessageDialog(null ,vehiculo.duenno + " debe pagar: $" + montoCobrado, "Cobro exitoso", JOptionPane.INFORMATION_MESSAGE);
 
 
