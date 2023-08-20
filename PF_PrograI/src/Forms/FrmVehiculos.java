@@ -295,9 +295,10 @@ public class FrmVehiculos extends javax.swing.JInternalFrame {
         LocalDateTime horaActual = LocalDateTime.now();
         
         Duration duracion = Duration.between(fechaHora, horaActual);
-        long horasEstacionadas = duracion.toHours();
-    
-        return horasEstacionadas;
+        long horasEstacionadas = duracion.getSeconds();
+        long exacto =(long) Math.ceil(horasEstacionadas/3600.0);
+        System.out.println("duracion: " + duracion + "        horasEstacionadas: "+horasEstacionadas + "        exactp: "+exacto);
+        return exacto;
     }
 
     private double obtenerTarifaPorHora(ClsVehiculos vehiculo) {
